@@ -1,0 +1,1389 @@
+
+/* ===== HEADER CHÍNH ===== */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #f2e4cc;
+  position: sticky!important;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.3s ease;       /* 👈 giúp header mượt khi cuộn */
+}
+
+/* Container giữ logo và menu */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 40px;
+  max-width: 1400px;
+  width: 100%;
+  transition: all 0.3s ease;       /* 👈 chuyển mượt khi co nhỏ */
+}
+
+/* Khi header dính (cuộn xuống) */
+.header.sticky {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1); /* 👈 đổ bóng nhẹ */
+  border-bottom: none;                       /* bỏ viền vàng nhạt khi cuộn */
+}
+
+.header.sticky .header-container {
+  height: 65px;   /* 👈 co nhẹ header cho tinh tế */
+  padding: 0 35px;
+}
+
+/* Co nhỏ logo khi cuộn */
+.header.sticky .logo img {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+
+.header {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+}
+
+
+body {
+  min-height: 200vh; /* 👈 Tạm thời để đảm bảo có vùng cuộn thử */
+}
+
+
+/* ===== RESET & GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: #4a3b2c;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.nav a,
+.dropbtn {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease;
+  padding: 6px 0;
+}
+
+.nav a:hover,
+.nav a.active,
+.dropdown:hover .dropbtn {
+  color: #d7b04b;
+}
+
+/* --- DROPDOWN --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 95%; /* đặt sát thanh header */
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background-color: #fff;
+  min-width: 180px;
+  border-top: 2px solid #d7b04b; /* viền vàng sang trọng */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 8px 8px;
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px 18px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f6f6f6;
+  color: #b38e38;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- ICON MẠNG XÃ HỘI --- */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #3c2f23;
+  font-size: 18px;
+}
+
+.header-icons a {
+  color: #3c2f23;
+  transition: color 0.3s ease;
+}
+
+.header-icons a:hover {
+  color: #d7b04b;
+}
+
+/* ===== ROOMS ===== */
+.rooms {
+  padding: 100px 0;
+  text-align: center;
+}
+.rooms h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.room-list {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.room-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.room-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.room-item h3 {
+  margin: 15px 0;
+  color: #bfa14a;
+}
+.room-item p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.btn-book {
+  display: inline-block;
+  margin-top: 10px;
+  background: #d7b04b;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-book:hover {
+  background: #b9973c;
+  transform: translateY(-2px);
+}
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #2d2d2d;
+  color: #f0e6d2;
+  padding: 50px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.footer-logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  color: #b4955a;
+  font-weight: 600;
+}
+
+.footer-logo .star {
+  color: #d44a4a;
+  font-size: 26px;
+}
+
+.hotel-name {
+  color: #c8b071;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Info */
+.footer-info {
+  flex: 1.2;
+}
+
+.footer-info h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #f7f4ed;
+}
+
+.footer-info p {
+  font-size: 15px;
+  color: #d8c99b;
+  margin: 6px 0;
+}
+
+.footer-info i {
+  margin-right: 8px;
+  color: #c9a246;
+}
+
+
+/* footer.footer*/
+/* ===== FOOTER FIX ===== */
+footer.footer {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 40px 0;
+  background: #222;
+  color: #fff;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footer-logo .star {
+  color: #d53b3b;
+  margin-right: 5px;
+}
+
+.footer-logo .hotel-name {
+  color: #d7b04b;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+
+.footer-info h4,
+.footer-social h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-info p {
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d7b04b;
+}
+
+/* Social */
+.footer-social {
+  flex: 1;
+}
+
+.footer-social h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #f7f4ed;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #c8b071;
+  border: 1px solid #c8b071;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  margin-right: 8px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #c8b071;
+  color: #2d2d2d;
+}
+
+
+
+
+/* ===== SLIDER ===== */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* lớp phủ mờ nền */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+/* chữ trong banner */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 3;
+  width: 80%;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #eee;
+}
+
+.btn-primary {
+  background: #d7b04b;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #b9973c;
+}
+
+/* Nút điều hướng */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 4;
+}
+
+.controls span {
+  cursor: pointer;
+  font-size: 36px;
+  color: #fff;
+  padding: 0 20px;
+  transition: 0.3s;
+}
+
+.controls span:hover {
+  color: #d7b04b;
+}
+
+/* ===== GIỚI THIỆU ===== */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 100px 10%;
+  background: linear-gradient(135deg, #e9f5f8, #d7e8ec);
+}
+
+.intro-content {
+  flex: 1;
+}
+
+.intro-content h2 {
+  font-size: 34px;
+  font-family: "Playfair Display", serif;
+  color: #3a2c1a;
+  margin-bottom: 20px;
+}
+
+.intro-content p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: #bfa14a;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: #a98d3e;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 95%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== POPUP ẢNH ===== */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  max-width: 80%;
+  max-height: 85%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #d7b04b;
+}
+
+/*room*/
+.rooms {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.rooms .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.rooms .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.rooms h2 {
+  font-size: 2.4rem;
+  color: #d7b04b;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.rooms h2 span {
+  color: #fff;
+}
+
+.rooms p {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  color: #eee;
+}
+
+.room-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.room-track {
+  display: flex;
+  animation: slideLoop 25s linear infinite;
+}
+
+@keyframes slideLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1140px); /* 3 * (350 + 30) */
+  }
+}
+
+.room-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px;
+  flex-shrink: 0;
+  margin: 0 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.5s ease;
+}
+
+.room-item:hover {
+  transform: scale(1.05);
+}
+
+.room-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.room-info {
+ flex-grow: 1;                 /* giúp phần nội dung chiếm đều chiều cao trong card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+}
+
+.room-info h3 {
+  color: #d7b04b;
+  font-weight: bold;
+  margin-bottom: 6px;
+   font-size: 1rem; 
+}
+
+.room-info p {
+  font-size: 0.80rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+.room-btn {
+  align-self: center;         /* căn giữa nút trong card */
+  margin-top: auto;           /* đẩy nút xuống đáy card */
+  background: #d7b04b;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.room-btn:hover {
+  background: #b9973c;
+  transform: scale(1.05);
+}
+
+
+/* === THU GỌN TOÀN BỘ KHUNG PHÒNG  === */
+.room-boxx {
+  display: flex;
+  align-items: center;          /* ép khung không bị dãn theo chiều dọc */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: unset;            /* bỏ mọi giới hạn chiều cao */
+}
+
+.room-boxx:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Ảnh bên trái – thu nhỏ chiều cao */
+.room-imgx {
+  width: 45%;
+  height: 200px !important;     /* ↓ giảm chiều cao ảnh */
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Phần nội dung bên phải */
+.room-infox {
+  flex: 1;
+  padding: 10px 20px;           /* ↓ giảm khoảng cách bên trong */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* đẩy nội dung lên trên */
+  color: #333;
+  line-height: 1.3;             /* ↓ rút khoảng cách dòng */
+}
+
+/* Tiêu đề phòng */
+.room-infox h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;              /* ↓ nhỏ hơn để card gọn lại */
+  color: #6b4f27;
+  margin-bottom: 6px;           /* ↓ giảm khoảng cách dưới tiêu đề */
+}
+
+/* Mô tả và chi tiết */
+.room-infox p {
+  font-size: 14px;              /* ↓ nhỏ hơn một chút */
+  line-height: 1.4;
+  color: #444;
+  margin-bottom: 6px;           /* ↓ giảm khoảng cách giữa các đoạn */
+}
+
+/* Khu vực giá và nút đặt phòng */
+.room-footerx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;              /* ↓ rút khoảng cách đến phần chữ trên */
+}
+
+.room-pricex {
+  font-weight: bold;
+  font-size: 17px;              /* ↓ chữ giá nhỏ hơn 1 chút */
+  color: #b68a2b;
+}
+
+.btn-roomx,
+.room-footerx .btn-secondary {
+  background: #d7b04b;
+  color: #fff;
+  padding: 8px 20px;            /* ↓ nút nhỏ gọn hơn */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-roomx:hover,
+.room-footerx .btn-secondary:hover {
+  background: #b9973c;
+  transform: scale(1.05);
+}
+
+/* Giảm khoảng cách giữa các phòng */
+.rooms-page {
+  width: 80%;
+  max-width: 1100px;            
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;                    
+}
+
+
+
+
+/* Responsive vẫn hoạt động */
+@media (max-width: 900px) {
+  .room-boxx {
+    flex-direction: column;
+  }
+  .room-imgx {
+    width: 100%;
+    height: 200px;
+  }
+  .room-infox {
+    padding: 15px;
+  }
+}
+
+
+/* ===== SLIDER ẢNH TRONG PHÒNG ===== */
+.room-sliderx {
+  position: relative;
+  flex: 1;
+  width: 45%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 12px 0 0 12px;
+}
+
+/* Container ảnh */
+.slidesx {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+/* Ảnh tràn đều, không bị hở */
+.slidesx img {
+    width: 100%;
+    aspect-ratio: 16 / 9;    /* chuẩn ảnh phòng resort */
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+/* Nút điều hướng giữ nguyên, nhưng hạ thấp để không che phần viền */
+.prevx, .nextx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;              
+  border: none;                  
+  color: #ffffff;             
+  font-size: 32px;               
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.75;               
+}
+.prevx:hover, .nextx:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.prevx { left: 12px; }
+.nextx { right: 12px; }
+
+/* Phòng có layout căn giữa, ảnh cao đều theo nội dung */
+.room-boxx {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.room-infox {
+  flex: 1;
+}
+
+
+/* Mobile: ảnh full chiều rộng */
+@media (max-width: 900px) {
+  .room-sliderx {
+    width: 100%;
+    height: auto;
+  }
+
+  .slidesx img {
+    height: 260px;
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+/* ===== Xem thêm sau phần Hướng nhìn ===== */
+.extra-content {
+  margin-top: 8px;
+}
+
+.toggle-desc {
+  background: none;
+  border: none;
+  color: #0077b6;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.toggle-desc:hover {
+  color: #b68a2b;
+}
+
+.hidden-text {
+  display: none;
+  margin-top: 8px;
+  animation: fadeIn 0.3s ease;
+}
+
+.extra-content.expanded .hidden-text {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden-text ul {
+  list-style: disc;
+  margin-left: 20px;
+  line-height: 1.6;
+  color: #444;
+}
+
+
+/* --- MENU CHÍNH --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 60px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #d2a446;
+}
+
+/* --- MENU CHÍNH --- */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #d7b04b;
+}
+
+/* --- DROPDOWN --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Nút chính */
+.dropbtn {
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+/* Danh sách thả xuống */
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 50%;                /* Căn giữa theo chữ DỊCH VỤ */
+  transform: translateX(-50%) translateY(10px); /* Dịch nhẹ xuống để tạo hiệu ứng */
+  background-color: #fff;
+  min-width: 180px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Link trong menu con */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 18px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f6f6f6;
+  color: #b38e38;
+}
+
+/* Khi rê chuột vào dropdown thì hiển thị menu con */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0); /* Trượt lên vị trí chuẩn */
+}
+
+/* Đổi màu chữ chính khi menu mở */
+.dropdown:hover .dropbtn {
+  color: #d7b04b;
+}
+
+
+.services {
+  text-align: center;
+  background-color: #f9f6f1;
+  padding: 70px 0;
+}
+/* --- DỊCH VỤ KHÁCH SẠN --- */
+.services h2 {
+  font-size: 32px;
+  color: #3c2f23;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* --- Layout --- */
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 340px;
+  min-height: 440px; /* ✅ đảm bảo tất cả cao bằng nhau */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ✅ giữ nút luôn ở cuối */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.service-item h3 {
+  color: #a27b43;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.service-item p {
+  font-size: 15px;
+  color: #555;
+  margin: 10px 20px;
+  line-height: 1.5;
+  flex-grow: 1; /* giúp đoạn mô tả co giãn đều nhau */
+}
+
+/* --- Hover card --- */
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Nút XEM THÊM --- */
+.btn-more {
+  display: inline-block;
+  align-self: center;
+  margin: 20px auto 25px;
+  background-color: #b9975b;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 26px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-more:hover {
+  background-color: #a67a35;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.map-section {
+  text-align: center;
+  padding: 40px 10%;
+}
+
+.footer {
+  background: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+/* ===== SLIDESHOW TIỆC CƯỚI ===== */
+/* Bố cục 2 cột nội dung */
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Bên trái (ảnh + nội dung) */
+.content-left {
+  flex: 2;
+}
+
+/* Slideshow nhỏ gọn bên trái */
+.wedding-slider {
+  width: 100%;
+  max-width: 600px; /* Giới hạn chiều rộng ảnh */
+  height: 300px; /* Chiều cao ảnh */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.wedding-slider .slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wedding-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.wedding-slider .slide.active {
+  opacity: 1;
+}
+
+/* Form bên phải */
+.content-right {
+  flex: 1;
+}
+
+.booking-box {
+  background: #f8f6f2;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* back xem phòng*/
+.btn-back {
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  background: #c8a24f;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-back:hover {
+  background:#c8a24f;
+  color: white;
+}
+
+/* đặt thành công*/
+.alert-success {
+  background: #e6ffe6;
+  color: #2e7d32;
+  border: 1px solid #81c784;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===== FIX: BỎ THANH CUỘN NGANG TOÀN TRANG ===== */
+html, body {
+  overflow-x: hidden;
+  overflow-y: visible; /* 👈 Bắt buộc, để sticky hoạt động */
+  height: auto;        /* 👈 Đừng ép 100vh */
+}
+
+/* Ngăn tràn ngang từ các khối con */
+.slider,
+.room-carousel,
+footer.footer,
+.intro,
+.page-banner {
+  overflow-x: hidden !important;
+}
+
+/* Loại bỏ lỗi width: 100vw gây tràn ngang */
+footer.footer {
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  transform: none;
+}
+/* ===== HEADER CHUNG ===== */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ✅ đẩy mọi thứ về bên trái trước */
+  height: 85px;
+  padding: 0 60px;
+  gap: 30px; /* khoảng cách giữa logo - menu - nút */
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 1400px;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+/* ===== MENU CHÍNH ===== */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* ✅ căn menu sang phải */
+  flex: 1;
+  gap: 25px;
+  margin-left: auto; /* ✅ đẩy menu sát về bên phải */
+  margin-right: -5px; /* điều chỉnh khoảng cách với nút ĐẶT PHÒNG NGAY */
+}
+
+/* ===== NÚT & BONVOY GIỮ NGUYÊN ===== */
+.btn-booknow {
+  margin-left: 0;
+}
+
+.bonvoy-logo {
+  margin-left: 10px;
+}
+
+
+/* ===== NÚT ĐẶT PHÒNG NGAY ===== */
+.btn-booknow {
+  background: #caa53f; /* vàng nâu sang trọng */
+  color: #fff !important; /* chữ trắng nổi bật */
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  padding: 10px 28px !important; /* cân đối chiều cao và độ rộng */
+  border: none;
+  border-radius: 12px; /* bo góc vừa phải như ảnh */
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12); /* bóng mờ nhẹ phía dưới */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-booknow:hover {
+  background: #b89433; /* vàng đậm hơn khi hover */
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== MARRIOTT BONVOY LOGO - PHONG CÁCH PREMIUM (ĐÃ CHỈNH VÀ THÊM !IMPORTANT) ===== */
+
+.bonvoy-logo {
+  background: #fff !important;
+  border: 2px solid #000000 !important;
+  color: #1a1a1a !important;
+  text-align: center !important;
+  padding: 12px 28px !important; /* Tăng padding cho thoáng hơn */
+  border-radius: 8px !important;
+  font-family: 'Helvetica Neue', Arial, sans-serif !important;
+  line-height: 1.2 !important;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important; /* Quan trọng để padding hiển thị đúng */
+}
+
+.bonvoy-logo:hover {
+  background: #fff9e8 !important;
+  border-color: #caa53f !important;
+}
+
+/* “MARRIOTT” - Mảnh hơn, giãn cách xa hơn */
+.bonvoy-top {
+  font-size: 11px !important;
+  font-weight: 600 !important; /* Giảm độ đậm cho thanh mảnh */
+  color: #caa53f !important;
+  display: block !important;
+  letter-spacing: 2px !important; /* Tăng giãn cách chữ */
+  margin-bottom: 2px !important; /* Thêm khoảng cách nhỏ giữa 2 chữ */
+}
+
+/* “BONVOY” */
+.bonvoy-bottom {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  position: relative !important;
+  color: #000 !important;
+  letter-spacing: 1.5px !important;
+  padding-bottom: 5px !important; /* Tạo không gian cho gạch chân */
+}
+
+/* Gạch chân - Gắn trực tiếp vào .bonvoy-bottom */
+.bonvoy-bottom::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 5px !important; /* Đẩy gạch chân xuống dưới 1 chút */
+  left: 50% !important; /* Căn giữa */
+  transform: translateX(-50%) !important; /* Căn giữa tuyệt đối */
+  width: 45% !important; /* Gạch chân ngắn và tinh tế hơn */
+  height: 2px !important;
+  background: #caa53f !important;
+}

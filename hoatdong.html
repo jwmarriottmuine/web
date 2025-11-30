@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JW Marriott Mui Ne Bay Resort</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/hoatdong.css" />
+  <link rel="stylesheet" href="assets/css/popup-booking.css">
+   <link rel="stylesheet" href="assets/css/noibat.css" />
+   <link rel="stylesheet" href="assets/css/logo.css" />
+  <link rel="stylesheet" href="assets/css/amthuc.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--Header-->
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="JW Marriott Logo">
+      <p class="logo-text">JW Marriott<br><span>Mui Ne Bay Resort</span></p>
+    </div>
+
+    <!-- Menu chính -->
+    <nav class="nav">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="phong.html">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html">SỰ KIỆN</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn"class="active">TRẢI NGHIỆM ▾</a>
+        <div class="dropdown-content">
+          <a href="hoatdong.html"class="active">HOẠT ĐỘNG</a>
+          <a href="spa.html">SPA</a>
+          <a href="gym.html">GYM</a>
+        </div>
+      </div>
+      <a href="lienhe.html">LIÊN HỆ</a>
+      <!-- Đặt phòng nằm luôn trong menu -->
+     <a href="#" class="btn-booknow" onclick="openPopupBooking(); return false;">ĐẶT PHÒNG NGAY</a>
+
+
+    </nav>
+
+    <!-- Marriott Bonvoy nằm sát góc phải -->
+   <a href="#" class="bonvoy-logo" aria-label="Marriott Bonvoy Home">
+  <span class="bonvoy-top">MARRIOTT</span>
+  <span class="bonvoy-bottom">BONVOY</span>
+</a>
+
+  </div>
+</header>
+
+
+<!-- HEADER MOBILE (đặt ngoài header chính) -->
+<div class="mobile-header">
+  <div class="logo">★ JW Marriott</div>
+  <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <h3>Menu</h3>
+<a href="index.html">TRANG CHỦ</a>
+      <a href="phong.html">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html">SỰ KIỆN</a>
+      <a href="hoatdong.html"class="active">HOẠT ĐỘNG</a>
+      <a href="spa.html">SPA</a>
+     <a href="gym.html">GYM</a>
+      <a href="lienhe.html">Liên hệ</a>
+</div>
+
+
+<!-- SLIDER (Banner chính) -->
+<section class="slider">
+  <div class="slides">
+   <div class="slide active" style="background-image: url('assets/img/anhchinh1.jpg');">
+      </div>
+    </div>
+
+  <div class="slide" style="background-image: url('assets/img/anhchinh2.jpg');">
+    </div>
+    <div class="slide" style="background-image: url('assets/img/anhchinh3.jpg');">
+    </div>
+  </div>
+
+  <!-- Nút điều hướng -->
+  <div class="controls">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</section>
+
+
+<section class="activities-section">
+  <div class="activities-header">
+    <h1>HOẠT ĐỘNG & TRẢI NGHIỆM</h1>
+    <p>Khám phá những hoạt động thú vị, hòa mình vào thiên nhiên và tận hưởng kỳ nghỉ trọn vẹn tại JW Marriott Mũi Né Bay Resort.</p>
+  </div>
+
+  <div class="activities-container">
+
+    <!-- 1️⃣ HỒ BƠI VÔ CỰC -->
+    <div class="activity-card">
+      <div class="activity-image">
+        <img src="assets/img/hoat1.jpg" alt="Hồ bơi vô cực">
+      </div>
+      <div class="activity-info">
+        <h3>HỒ BƠI VÔ CỰC</h3>
+        <p><strong>Giờ hoạt động:</strong> Thứ Hai – Chủ Nhật | 7:00 sáng – 7:00 tối<br>
+        <strong>Vị trí:</strong> Ngoài trời, trung tâm khu nghỉ dưỡng</p>
+
+        <p><strong>Đặc trưng:</strong><br>
+        • Hồ bơi vô cực hướng ra đại dương, nối liền trời và biển trong khung cảnh tuyệt mỹ.<br>
+        • Ghế tắm nắng cao cấp với dù che riêng tư.<br>
+        • Dịch vụ đồ uống và trái cây tươi phục vụ tận nơi.<br>
+        • Không gian yên tĩnh, lý tưởng để thư giãn hoặc ngắm hoàng hôn.</p>
+
+        <p>Trải nghiệm cảm giác ngâm mình giữa làn nước xanh trong, nơi đường chân trời hòa làm một – 
+        mang đến sự thư thái và sang trọng tuyệt đối.</p>
+      </div>
+    </div>
+
+    <!-- 2️⃣ HỒ BƠI LAGOON -->
+    <div class="activity-card">
+      <div class="activity-image">
+        <img src="assets/img/hoat2.jpg" alt="Hồ bơi Lagoon">
+      </div>
+      <div class="activity-info">
+        <h3>HỒ BƠI LAGOON</h3>
+        <p><strong>Giờ hoạt động:</strong> Thứ Hai – Chủ Nhật | 7:00 sáng – 7:00 tối<br>
+        <strong>Vị trí:</strong> Ngoài trời, giữa khu vườn nhiệt đới</p>
+
+        <p><strong>Đặc trưng:</strong><br>
+        • Hồ bơi lớn bao quanh bởi hàng dừa xanh và thảm cỏ mát lành.<br>
+        • Hồ bơi trẻ em riêng biệt an toàn tuyệt đối.<br>
+        • Quầy bar dưới nước phục vụ cocktail, nước ép tươi.<br>
+        • Nhân viên cứu hộ túc trực và khăn tắm miễn phí.</p>
+
+        <p>Đây là nơi hoàn hảo cho những giờ phút thư giãn cùng gia đình, 
+        tận hưởng không khí mát lành giữa thiên nhiên và tiện nghi đẳng cấp.</p>
+      </div>
+    </div>
+
+    <!-- 3️⃣ CÂU LẠC BỘ TRẺ EM -->
+    <div class="activity-card">
+      <div class="activity-image">
+        <img src="assets/img/hoat3.jpg" alt="Câu lạc bộ trẻ em">
+      </div>
+      <div class="activity-info">
+        <h3>CÂU LẠC BỘ TRẺ EM</h3>
+        <p><strong>Giờ hoạt động:</strong> Hàng ngày | 9:00 sáng – 7:00 tối<br>
+        <strong>Phí:</strong> Miễn phí</p>
+
+        <p>Hãy bước vào không gian vui chơi được thiết kế riêng cho các VIP nhí, 
+        nơi sự sáng tạo và trí tưởng tượng được tự do bay bổng. 
+        Từ nghệ thuật thủ công đến kể chuyện và trò chơi vận động, 
+        mỗi ngày tại Kid’s Club đều là một cuộc phiêu lưu đầy tiếng cười.</p>
+
+        <p><strong>Hoạt động nổi bật:</strong><br>
+        • Vẽ tranh, làm thủ công, nặn đất sét.<br>
+        • Giờ kể chuyện, chiếu phim hoạt hình.<br>
+        • Khu vui chơi trong nhà và ngoài trời có mái che.<br>
+        • Giám sát bởi đội ngũ nhân viên thân thiện, giàu kinh nghiệm.</p>
+      </div>
+    </div>
+
+    <!-- 4️⃣ HOẠT ĐỘNG NGOÀI TRỜI & KHÁM PHÁ -->
+    <div class="activity-card">
+      <div class="activity-image">
+        <img src="assets/img/hoat4.jpg" alt="Hoạt động ngoài trời">
+      </div>
+      <div class="activity-info">
+        <h3>HOẠT ĐỘNG NGOÀI TRỜI & KHÁM PHÁ</h3>
+        <p><strong>Tour nổi bật:</strong><br>
+        • Khám phá Đồi Cát Bay, ngắm hoàng hôn đỏ rực.<br>
+        • Tham quan Làng Chài cổ và Tháp Pô Sah Inư – di sản văn hóa Chăm Pa.</p>
+
+        <p><strong>Trò chơi & Thể thao biển:</strong><br>
+        • Chèo thuyền kayak, lướt sóng, bơi thuyền buồm.<br>
+        • Bóng chuyền, đá banh bãi biển, yoga sáng hướng biển.<br>
+        • Hướng dẫn viên chuyên nghiệp cho tour nhóm nhỏ.</p>
+
+        <p>Một ngày tại JW Marriott Mũi Né không chỉ là nghỉ dưỡng, 
+        mà còn là hành trình khám phá năng động, đậm chất biển Việt Nam.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+ <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo -->
+    <div class="footer-logo">
+      <span class="star">★</span>
+      <span class="hotel-name">JW Marriott Mui Ne Bay Resort</span>
+    </div>
+
+    <!-- Thông tin liên hệ -->
+    <div class="footer-info">
+      <h4>JW MARRIOTT MUI NE BAY RESORT</h4>
+      <p><i class="fa-solid fa-location-dot"></i>Ven biển Mũi Né, thành phố Phan Thiết, Tỉnh Lâm Đồng </p>
+      <p><i class="fa-solid fa-phone"></i> Phone: 024 3678 6868</p>
+      <p><i class="fa-solid fa-envelope"></i> Email: reservation@jwrmuinebayesort.vn</p>
+    </div>
+
+    <!-- Kênh thông tin -->
+    <div class="footer-social">
+      <h4>CÁC KÊNH THÔNG TIN CHÍNH THỨC</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/hai26062003" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FORM ĐẶT PHÒNG NỔI ===== -->
+<div id="popupOverlay" class="popup-overlay"></div>
+
+<div id="popupBooking" class="popup-booking">
+  <div class="popup-box">
+    <span class="popup-close" onclick="closePopupBooking()">&times;</span>
+    <h2>Đặt phòng ngay</h2>
+
+    <form id="popupBookingForm" onsubmit="handleBookingSubmit(event)">
+
+      <!-- Ô thông báo thành công -->
+      <div id="bookingSuccess" class="booking-success hidden">
+        🎉 Đặt phòng thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.
+      </div>
+
+      <label>Họ và tên:</label>
+      <input type="text" id="popupName" placeholder="Nhập họ và tên" required>
+
+      <label>Email:</label>
+      <input type="email" id="popupEmail" placeholder="Nhập email" required>
+
+      <label>Số điện thoại:</label>
+      <input type="tel" id="popupPhone" placeholder="Nhập số điện thoại" required>
+
+      <label>Chọn phòng:</label>
+      <select id="popupRoom">
+        <option>Deluxe Standard</option>
+        <option>Deluxe Ocean</option>
+        <option>Premier Suites</option>
+        <option>Executive Suites</option>
+        <option>Presidential Suite 1 phòng ngủ</option>
+        <option>Biệt thự 3 phòng ngủ</option>
+        <option>Biệt thự sân vườn 4 ngủ</option>
+        <option>Biệt thự 4 phòng ngủ</option>
+      </select>
+
+      <div class="popup-date-group">
+        <div>
+          <label>Ngày nhận phòng:</label>
+          <input type="date" id="popupCheckin" required>
+        </div>
+        <div>
+          <label>Ngày trả phòng:</label>
+          <input type="date" id="popupCheckout" required>
+        </div>
+      </div>
+
+      <label>Số người:</label>
+      <input type="number" id="popupGuests" min="1" max="10" value="2">
+
+      <button type="submit" class="popup-btn-submit">Xác nhận đặt phòng</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const popup = document.getElementById("image-popup");
+  const popupImg = document.getElementById("popup-img");
+  const introImg = document.getElementById("intro-img");
+  const closeBtn = document.querySelector(".close");
+
+  introImg.addEventListener("click", () => {
+    popup.style.display = "flex";
+    popupImg.src = introImg.src;
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+</script>
+<script>
+const track = document.getElementById("roomTrack");
+const items = document.querySelectorAll(".room-item");
+items.forEach((item) => {
+  const clone = item.cloneNode(true);
+  track.appendChild(clone);
+});
+
+</script>
+
+<script>
+function moveSlide(button, direction) {
+  const slider = button.closest('.room-sliderx');
+  const slides = slider.querySelector('.slidesx');
+  const total = slides.children.length;
+  let current = parseInt(slider.getAttribute('data-index') || 0);
+  current = (current + direction + total) % total;
+  slider.setAttribute('data-index', current);
+  slides.style.transform = `translateX(-${current * 100}%)`;
+}
+
+// Tự động trượt mỗi 5 giây
+setInterval(() => {
+  document.querySelectorAll('.room-sliderx').forEach(slider => {
+    const slides = slider.querySelector('.slidesx');
+    const total = slides.children.length;
+    let current = parseInt(slider.getAttribute('data-index') || 0);
+    current = (current + 1) % total;
+    slider.setAttribute('data-index', current);
+    slides.style.transform = `translateX(-${current * 100}%)`;
+  });
+}, 5000);
+</script>
+<script>
+document.querySelectorAll('.toggle-desc').forEach(button => {
+  button.addEventListener('click', () => {
+    const wrapper = button.closest('.extra-content');
+    wrapper.classList.toggle('expanded');
+    button.textContent = wrapper.classList.contains('expanded')
+      ? 'Thu gọn ⯅'
+      : 'Xem thêm ⯆';
+  });
+});
+</script>
+
+ <script src="assets/js/main.js"></script>
+ <!-- ... phần cuối cùng của trang ... -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      // chờ 1 chút để trang load xong layout rồi mới cuộn
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 400);
+    } else {
+      console.log("Không tìm thấy phần tử:", hash);
+    }
+  }
+});
+</script>
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 60) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+  });
+</script>
+<script src="assets/js/popup-booking.js"></script>
+</body>
+</html>

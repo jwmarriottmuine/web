@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JW Marriott Mui Ne Bay Resort</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+   <link rel="stylesheet" href="assets/css/noibat.css" />
+   <link rel="stylesheet" href="assets/css/logo.css" />
+   <link rel="stylesheet" href="assets/css/popup-booking.css">
+  <link rel="stylesheet" href="assets/css/amthuc.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--Header-->
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="JW Marriott Logo">
+      <p class="logo-text">JW Marriott<br><span>Mui Ne Bay Resort</span></p>
+    </div>
+
+    <!-- Menu chính -->
+    <nav class="nav">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="phong.html"class="active">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html">SỰ KIỆN</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">TRẢI NGHIỆM ▾</a>
+        <div class="dropdown-content">
+          <a href="hoatdong.html">HOẠT ĐỘNG</a>
+          <a href="spa.html">SPA</a>
+          <a href="gym.html">GYM</a>
+        </div>
+      </div>
+      <a href="lienhe.html">LIÊN HỆ</a>
+      <!-- Đặt phòng nằm luôn trong menu -->
+     <a href="#" class="btn-booknow" onclick="openPopupBooking(); return false;">ĐẶT PHÒNG NGAY</a>
+
+
+    </nav>
+
+    <!-- Marriott Bonvoy nằm sát góc phải -->
+   <a href="#" class="bonvoy-logo" aria-label="Marriott Bonvoy Home">
+  <span class="bonvoy-top">MARRIOTT</span>
+  <span class="bonvoy-bottom">BONVOY</span>
+</a>
+
+  </div>
+</header>
+
+
+<!-- HEADER MOBILE (đặt ngoài header chính) -->
+<div class="mobile-header">
+  <div class="logo">★ JW Marriott</div>
+  <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <h3>Menu</h3>
+  <a href="index.html"class="active">Trang chủ</a>
+  <a href="phong.html">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html">SỰ KIỆN</a>
+      <a href="beboi.html">BỂ BƠI</a>
+      <a href="spa.html">SPA</a>
+     <a href="thethao.html">THỂ THAO</a>
+      <a href="lienhe.html">Liên hệ</a>
+</div>
+
+
+<!-- SLIDER (Banner chính) -->
+<section class="slider">
+  <div class="slides">
+   <div class="slide active" style="background-image: url('assets/img/anhchinh1.jpg');">
+      </div>
+    </div>
+
+  <div class="slide" style="background-image: url('assets/img/anhchinh2.jpg');">
+    </div>
+    <div class="slide" style="background-image: url('assets/img/anhchinh3.jpg');">
+    </div>
+  </div>
+
+  <!-- Nút điều hướng -->
+  <div class="controls">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</section>
+
+<!-- DANH SÁCH PHÒNG -->
+<section class="room-list">
+  <section class="rooms-page">
+
+  <!-- Phòng 1 -->
+   <div id="duluxe-standard" class="room-boxx">
+    <div class="room-sliderx">
+      <div class="slidesx">
+        <img src="assets/img/phong1.jpg" alt="Phòng Duluxe Standard 1">
+        <img src="assets/img/phong1.jpg" alt="Phòng King Suite 2">
+      </div>
+      <button class="prevx" onclick="moveSlide(this, -1)">&#10094;</button>
+      <button class="nextx" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+    <div class="room-infox">
+    <h3>Duluxe Standard</h3>
+    <p>
+      <strong>Diện tích:</strong> 54m²<br>
+      <strong>Giường:</strong> 1 giường King <br>
+      <strong>Sức chứa:</strong> tối đa 3 người<br>
+         <strong>Hướng nhìn:</strong> Vườn và biển<br>
+      <strong>Phòng tắm:</strong> Hai bồn rửa mặt, vòi hoa sen và bồn tắm lát đá cẩm thạch<br>
+      <strong>Điểm độc đáo:</strong> Ban công với ghế ngồi ngoài trời<br>
+    <div class="room-footerx">
+      <div class="room-pricex">Giá từ: 4.000.000 VNĐ</div>
+      <button class="btn-secondary" onclick="openPopupBooking('Deluxe Standard')">
+  Đặt phòng
+</button>
+    </div>
+  </div>
+</div>
+<!-- Phòng 2 -->
+ <div id="deluxe-superior" class="room-boxx">
+    <div class="room-sliderx">
+      <div class="slidesx">
+        <img src="assets/img/phong2.jpg" alt="Phòng Deluxe Ocean 1">
+        <img src="assets/img/phong2_1.jpg" alt="Phòng Deluxe Ocean 2">
+      </div>
+      <button class="prevx" onclick="moveSlide(this, -1)">&#10094;</button>
+      <button class="nextx" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+
+    <div class="room-infox">
+    <h3>Phòng Deluxe Ocean</h3>
+    <p>
+      <strong>Diện tích:</strong> 55m²<br>
+      <strong>Giường:</strong> 01 giường King (hoặc 2 giường Twin)<br>
+      <strong>Sức chứa:</strong> tối đa 3 người<br>
+          <strong>Phòng tắm:</strong> Phòng tắm lớn với hai bồn rửa mặt, vòi hoa sen và bồn tắm lát đá cẩm thạch<br>
+          <strong>Hướng:</strong> biển,ban công rộng rãi
+   
+    <div class="room-footerx">
+      <div class="room-pricex">Giá từ: 4.600.000 VNĐ</div>
+      <button class="btn-secondary" onclick="openPopupBooking('Deluxe Ocean')">
+  Đặt phòng
+</button>
+    </div>
+  </div>
+</div>
+
+<!-- Phòng 3 -->
+  <div id="sunset-suites" class="room-boxx">
+    <div class="room-sliderx">
+      <div class="slidesx">
+        <img src="assets/img/phong3.jpg" alt="Phòng Premier Suites 1">
+        <img src="assets/img/phong3_1.jpg" alt="Phòng Premier Suites 2">
+      </div>
+      <button class="prevx" onclick="moveSlide(this, -1)">&#10094;</button>
+      <button class="nextx" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+
+   <div class="room-infox">
+    <h3>Phòng Premier Suites</h3>
+    <p>
+      <strong>Diện tích:</strong> 70m²<br>
+      <strong>Giường:</strong> 1 giường King hoặc 2 giường Twin<br>
+      <strong>Sức chứa:</strong> tối đa 3 người<br>
+          <strong>Hướng:</strong> Biển và bãi biển<br>
+          <strong>Điểm độc đáo:</strong> Phòng tắm riêng với bàn trang điểm đôi, khu vực thay quần áo, vòi sen và bồn tắm tách biệt<br>
+    <div class="room-footerx">
+    <div class="room-pricex">Giá từ: 5.700.000 VNĐ</div>
+    <button class="btn-secondary" onclick="openPopupBooking('Premier Suites')">
+  Đặt phòng
+</button>
+
+
+  </div>
+  </div>
+</div>
+
+<!-- Phòng 4 -->
+<div id="bay-suites" class="room-boxx">
+
+  <!-- Slider ảnh -->
+  <div class="room-sliderx">
+    <div class="slidesx">
+      <img src="assets/img/phong4.jpg" alt="Executive Suites 1">
+      <img src="assets/img/phong4_1.jpg" alt="Executive Suites 2">
+    </div>
+    <button class="prevx" onclick="moveSlide(this, -1)">&#10094;</button>
+    <button class="nextx" onclick="moveSlide(this, 1)">&#10095;</button>
+  </div>
+
+  <!-- Nội dung thông tin phòng -->
+  <div class="room-infox">
+    <h3>Executive Suites</h3>
+    <p>
+      <strong>Diện tích:</strong> 109m²<br>
+      <strong>Giường:</strong> King<br>
+      <strong>Sức chứa:</strong> 3 người<br>
+      <strong>Hướng:</strong> Tầm nhìn hướng biển<br>
+      <strong>Phòng tắm:</strong> Phòng tắm riêng với bàn trang điểm đôi, khu vực thay quần áo, vòi sen và bồn tắm tách biệt<br>
+      <strong>Điểm độc đáo:</strong> Khu vực ngồi / sinh hoạt riêng
+    </p>
+
+    <!-- Giá + nút đặt -->
+    <div class="room-footerx">
+      <div class="room-pricex">Giá từ: 6.800.000 VNĐ</div>
+     <button class="btn-secondary" onclick="openPopupBooking('Executive Suites')">
+  Đặt phòng
+</button>
+
+
+    </div>
+
+  </div>
+
+</div>
+ 
+<!-- Phòng 5 -->
+   <div id="BT1" class="room-boxx">
+    <div class="room-sliderx">
+      <div class="slidesx">
+   <img src="assets/img/phong5.jpg" alt="Presidential Suite 1 phòng ngủ 1">
+      <img src="assets/img/phong5_1.jpg" alt="Presidential Suite 1 phòng ngủ 2">
+      </div>
+      <button class="prevx" onclick="moveSlide(this, -1)">&#10094;</button>
+      <button class="nextx" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+
+    <div class="room-infox">
+    <h3>Presidential Suite 1 phòng ngủ</h3>
+    <p>
+      <strong>Diện tích:</strong> 130m²<br>
+      <strong>Giường:</strong> King<br>
+      <strong>Sức chứa:</strong> 3 người<br>
+          <strong>Điểm độc đáo:</strong> khu vực sinh hoạt/ngồi riêng,bàn công ngoài trời rộng<br>
+    <div class="room-footerx">
+     <div class="room-pricex">Giá từ: 12.000.000 VNĐ</div>
+   <button class="btn-secondary" onclick="openPopupBooking('Presidential Suite 1 phòng ngủ')">
+  Đặt phòng
+</button>
+
+
+  </div>
+  </div>
+</div>
+
+
+<!-- Phòng 6 -->
+   <div id="BT2" class="room-boxx">
+    <div class="room-sliderx">
+      <div class="slidesx">
+      <img src="assets/img/phong6.jpg" alt="Biệt thự 3 phòng ngủ 1">
+      <img src="assets/img/phong6_1jpg" alt="Biệt thự 3 phòng ngủ 2">
+      </div>
+      <button class="prevx" onclick="moveSlide(this, -1)">&#10094;</button>
+      <button class="nextx" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+
+    <div class="room-infox">
+    <h3>Biệt thự 3 phòng ngủ</h3>
+    <p>
+      <strong>Diện tích:</strong> 575m²<br>
+      <strong>Giường:</strong> 2 phòng giường King và 1 phòng giường Twin<br>
+      <strong>Sức chứa tối đa:</strong> 7 người<br>
+      <strong>Tầm nhìn: </strong> hứng biển,ban công<br>
+          <strong>Phòng tắm:</strong> 3 phòng tắm đầy đủ tiện nghi và hiện đại<br>
+          <strong>Điểm độc đáo:</strong> thiết kế 2 tầng, 2 hồ bơi riêng ngoài trời và sân hiên rộng rãi<br>
+    <div class="room-footerx">
+    <div class="room-pricex">Giá từ: 16.500.000 VNĐ</div>
+   <button class="btn-secondary" onclick="openPopupBooking('Biệt thự 3 phòng ngủ')">
+  Đặt phòng
+</button>
+
+
+  </div>
+  </div>
+</div>
+
+<!-- Phòng 7 -->
+<div id="BT3" class="room-boxx">
+
+  <!-- Slider ảnh -->
+  <div class="room-sliderx">
+    <div class="slidesx">
+      <img src="assets/img/phong7.jpg" alt="Biệt thự sân vườn 4 ngủ 1">
+      <img src="assets/img/phong7_1.jpg" alt="Biệt thự sân vườn 4 ngủ 2">
+    </div>
+    <button class="prevx" onclick="moveSlide(this, -1)">&#10094;</button>
+    <button class="nextx" onclick="moveSlide(this, 1)">&#10095;</button>
+  </div>
+
+  <!-- Nội dung thông tin phòng -->
+  <div class="room-infox">
+    <h3>Biệt thự sân vườn 4 ngủ</h3>
+    <p>
+      <strong>Diện tích:</strong> 628m²<br>
+      <strong>Giường:</strong> 3 phòng giường King, 1 phòng giường Twin<br>
+      <strong>Sức chứa:</strong> tối đa 9 người<br>
+      <strong>Phòng tắm:</strong> 2 phòng tắm riêng đầy đủ tiện nghi<br>
+      <strong>Điểm độc đáo:</strong> Hồ bơi vô cực riêng, sân hiên ngoài trời, khu vực sân thượng rộng rãi
+    </p>
+
+    <!-- Giá + nút đặt phòng -->
+    <div class="room-footerx">
+      <div class="room-pricex">Giá từ: 18.000.000 VNĐ</div>
+     <button class="btn-secondary" onclick="openPopupBooking('Biệt thự sân vườn 4 ngủ')">
+  Đặt phòng
+</button>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Phòng 8 -->
+   <div id="BT4" class="room-boxx">
+    <div class="room-sliderx">
+      <div class="slidesx">
+     <img src="assets/img/phong8.jpg" alt="Biệt thự 4 phòng ngủ 1">
+      <img src="assets/img/phong8_1.jpg" alt="Biệt thự 4 phòng ngủ 2">
+      </div>
+      <button class="prevx" onclick="moveSlide(this, -1)">&#10094;</button>
+      <button class="nextx" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+
+    <div class="room-infox">
+    <h3>Biệt thự 4 phòng ngủ </h3>
+    <p>
+      <strong>Diện tích:</strong> 628m²<br>
+      <strong>Giường:</strong> King<br>
+      <strong>Sức chứa:</strong> 9 người<br>
+      <strong>Phòng tắm:</strong> Bốn phòng tắm riêng biệt, đầy đủ tiện nghi trang bị bồn tắm đá cẩm thạch cỡ lớn<br>
+          <strong>Điểm độc đáo:</strong> view biển,thiết kế hai tầng với bốn phòng nghỉ riêng biệt, khu vực sinh hoạt chung mang phong để thư giãn và tận hưởng, hồ bơi riêng ngoài trời
+<br>
+    <div class="room-footerx">
+    <div class="room-pricex">Giá từ: 19.500.000 VNĐ</div>
+   <button class="btn-secondary" onclick="openPopupBooking('Biệt thự 4 phòng ngủ')">
+  Đặt phòng
+</button>
+
+
+  </div>
+  </div>
+</div>
+</section>
+</section>
+
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo -->
+    <div class="footer-logo">
+      <span class="star">★</span>
+      <span class="hotel-name">JW Marriott Mui Ne Bay Resort</span>
+    </div>
+
+    <!-- Thông tin liên hệ -->
+    <div class="footer-info">
+      <h4>JW MARRIOTT MUI NE BAY RESORT</h4>
+      <p><i class="fa-solid fa-location-dot"></i>Ven biển Mũi Né, thành phố Phan Thiết, Tỉnh Lâm Đồng </p>
+      <p><i class="fa-solid fa-phone"></i> Phone: 024 3678 6868</p>
+      <p><i class="fa-solid fa-envelope"></i> Email: reservation@jwrmuinebayesort.vn</p>
+    </div>
+
+    <!-- Kênh thông tin -->
+    <div class="footer-social">
+      <h4>CÁC KÊNH THÔNG TIN CHÍNH THỨC</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/hai26062003" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FORM ĐẶT PHÒNG NỔI ===== -->
+<div id="popupOverlay" class="popup-overlay"></div>
+
+<div id="popupBooking" class="popup-booking">
+  <div class="popup-box">
+    <span class="popup-close" onclick="closePopupBooking()">&times;</span>
+    <h2>Đặt phòng ngay</h2>
+
+    <form id="popupBookingForm" onsubmit="handleBookingSubmit(event)">
+
+      <!-- Ô thông báo thành công -->
+      <div id="bookingSuccess" class="booking-success hidden">
+        🎉 Đặt phòng thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.
+      </div>
+
+      <label>Họ và tên:</label>
+      <input type="text" id="popupName" placeholder="Nhập họ và tên" required>
+
+      <label>Email:</label>
+      <input type="email" id="popupEmail" placeholder="Nhập email" required>
+
+      <label>Số điện thoại:</label>
+      <input type="tel" id="popupPhone" placeholder="Nhập số điện thoại" required>
+
+      <label>Chọn phòng:</label>
+      <select id="popupRoom">
+        <option>Deluxe Standard</option>
+        <option>Deluxe Ocean</option>
+        <option>Premier Suites</option>
+        <option>Executive Suites</option>
+        <option>Presidential Suite 1 phòng ngủ</option>
+        <option>Biệt thự 3 phòng ngủ</option>
+        <option>Biệt thự sân vườn 4 ngủ</option>
+        <option>Biệt thự 4 phòng ngủ</option>
+      </select>
+
+      <div class="popup-date-group">
+        <div>
+          <label>Ngày nhận phòng:</label>
+          <input type="date" id="popupCheckin" required>
+        </div>
+        <div>
+          <label>Ngày trả phòng:</label>
+          <input type="date" id="popupCheckout" required>
+        </div>
+      </div>
+
+      <label>Số người:</label>
+      <input type="number" id="popupGuests" min="1" max="10" value="2">
+
+      <button type="submit" class="popup-btn-submit">Xác nhận đặt phòng</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const popup = document.getElementById("image-popup");
+  const popupImg = document.getElementById("popup-img");
+  const introImg = document.getElementById("intro-img");
+  const closeBtn = document.querySelector(".close");
+
+  introImg.addEventListener("click", () => {
+    popup.style.display = "flex";
+    popupImg.src = introImg.src;
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+</script>
+<script>
+const track = document.getElementById("roomTrack");
+const items = document.querySelectorAll(".room-item");
+items.forEach((item) => {
+  const clone = item.cloneNode(true);
+  track.appendChild(clone);
+});
+
+</script>
+
+<script>
+function moveSlide(button, direction) {
+  const slider = button.closest('.room-sliderx');
+  const slides = slider.querySelector('.slidesx');
+  const total = slides.children.length;
+  let current = parseInt(slider.getAttribute('data-index') || 0);
+  current = (current + direction + total) % total;
+  slider.setAttribute('data-index', current);
+  slides.style.transform = `translateX(-${current * 100}%)`;
+}
+
+// Tự động trượt mỗi 5 giây
+setInterval(() => {
+  document.querySelectorAll('.room-sliderx').forEach(slider => {
+    const slides = slider.querySelector('.slidesx');
+    const total = slides.children.length;
+    let current = parseInt(slider.getAttribute('data-index') || 0);
+    current = (current + 1) % total;
+    slider.setAttribute('data-index', current);
+    slides.style.transform = `translateX(-${current * 100}%)`;
+  });
+}, 5000);
+</script>
+<script>
+document.querySelectorAll('.toggle-desc').forEach(button => {
+  button.addEventListener('click', () => {
+    const wrapper = button.closest('.extra-content');
+    wrapper.classList.toggle('expanded');
+    button.textContent = wrapper.classList.contains('expanded')
+      ? 'Thu gọn ⯅'
+      : 'Xem thêm ⯆';
+  });
+});
+</script>
+
+ <script src="assets/js/main.js"></script>
+ <!-- ... phần cuối cùng của trang ... -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      // chờ 1 chút để trang load xong layout rồi mới cuộn
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 400);
+    } else {
+      console.log("Không tìm thấy phần tử:", hash);
+    }
+  }
+});
+</script>
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 60) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+});
+</script>
+<script src="assets/js/popup-booking.js"></script>
+
+</body>
+</html>

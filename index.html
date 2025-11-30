@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JW Marriott Mui Ne Bay Resort</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/popup-booking.css">
+   <link rel="stylesheet" href="assets/css/logo.css" />
+  <link rel="stylesheet" href="assets/css/amthuc.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--Header-->
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="JW Marriott Logo">
+      <p class="logo-text">JW Marriott<br><span>Mui Ne Bay Resort</span></p>
+    </div>
+
+    <!-- Menu chính -->
+    <nav class="nav">
+      <a href="index.html" class="active">TRANG CHỦ</a>
+      <a href="phong.html">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html">SỰ KIỆN</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">TRẢI NGHIỆM ▾</a>
+        <div class="dropdown-content">
+          <a href="hoatdong.html">HOẠT ĐỘNG</a>
+          <a href="spa.html">SPA</a>
+          <a href="gym.html">GYM</a>
+        </div>
+      </div>
+      <a href="lienhe.html">LIÊN HỆ</a>
+      <!-- Đặt phòng nằm luôn trong menu -->
+     <a href="#" class="btn-booknow" onclick="openPopupBooking(); return false;">ĐẶT PHÒNG NGAY</a>
+
+
+    </nav>
+
+    <!-- Marriott Bonvoy nằm sát góc phải -->
+   <a href="#" class="bonvoy-logo" aria-label="Marriott Bonvoy Home">
+  <span class="bonvoy-top">MARRIOTT</span>
+  <span class="bonvoy-bottom">BONVOY</span>
+</a>
+
+  </div>
+</header>
+
+
+<!-- HEADER MOBILE (đặt ngoài header chính) -->
+<div class="mobile-header">
+  <div class="logo">★ JW Marriott</div>
+  <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <h3>Menu</h3>
+  <a href="index.html"class="active">Trang chủ</a>
+  <a href="phong.html">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html">SỰ KIỆN</a>
+      <a href="beboi.html">BỂ BƠI</a>
+      <a href="spa.html">SPA</a>
+     <a href="thethao.html">THỂ THAO</a>
+      <a href="lienhe.html">Liên hệ</a>
+</div>
+
+
+<!-- SLIDER (Banner chính) -->
+<section class="slider">
+  <div class="slides">
+   <div class="slide active" style="background-image: url('assets/img/anhchinh1.jpg');">
+      </div>
+    </div>
+
+  <div class="slide" style="background-image: url('assets/img/anhchinh2.jpg');">
+    </div>
+    <div class="slide" style="background-image: url('assets/img/anhchinh3.jpg');">
+    </div>
+  </div>
+
+  <!-- Nút điều hướng -->
+  <div class="controls">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</section>
+
+  <!-- INTRO -->
+  <section class="intro">
+  <div class="intro-content">
+    <h2>Chào mừng đến với JW Marriott Mui Ne Bay Resort</h2>
+    <p><b>
+      LÀM PHONG PHÚ THÊM KỲ NGHỈ CỦA BẠN TẠI KHU NGHỈ DƯỠNG BÃI BIỂN SANG TRỌNG CỦA CHÚNG TÔI TẠI VIỆT NAM</b><br>
+    Tìm kiếm sự bình yên tại JW Marriott Mui Ne Bay Resort-thiên đường nghỉ dưỡng sang trọng bên bờ biển Mũi
+    Né tuyệt mỹ. Tọa lạc tại vị trí đắc địa với tầm nhìn hướng ra vịnh biển trong xanh và bãi cát vàng óng ánh, 
+    khu nghỉ dưỡng mang đến trải nghiệm kết hợp hoàn hảo giữa nghệ thuật kiến trúc tinh tế, dịch vụ đẳng cấp quốc tế và 
+    không gian tĩnh lặng của thiên nhiên miền biển Nam Trung Bộ.
+    </p>
+  </div>
+
+  <div class="intro-image">
+    <img id="intro-img" src="assets/img/anhphu1.jpg" alt="JW Marriott Mui Ne Bay Resort">
+  </div>
+</section>
+
+<!-- ⚠️ POPUP ĐẶT NGOÀI SECTION -->
+<div id="image-popup" class="popup">
+  <span class="close">&times;</span>
+  <img class="popup-content" id="popup-img">
+</div>
+
+<!-- ROOMS -->
+<section class="rooms" style="background-image: url('images/bg-room.jpg');">
+  <div class="overlay"></div>
+  <div class="container">
+    <h2>PHÒNG <span>KHÁCH SẠN</span></h2>
+    <p>Phòng nghỉ từ tiêu chuẩn đến cao cấp được bố trí hài hòa trong khuôn viên khách sạn. 
+      Tất cả các phòng nghỉ đều sở hữu tiện nghi đẳng cấp, không gian khoáng đạt cùng hiên ban công lãng mạn với tầm nhìn đường phố tấp nập.
+    </p>
+    <div class="room-carousel">
+      <div class="room-track" id="roomTrack">
+        <!-- 1 -->
+        <div class="room-item">
+          <img src="assets/img/phong1.jpg" alt="Duluxe Standard">
+          <div class="room-info">
+            <h3>Duluxe Standard</h3>
+            <p>💰 Giá Từ: 4.000.000 VNĐ<br>👤 Số người: tối đa 3 người<br>
+              🛏️ Giường: 1 giường King <br>
+              🛀 Phòng tắm: Hai bồn rửa mặt, vòi hoa sen và bồn tắm lát đá cẩm thạch<br>
+              📏 Kích thước: 54m²<br>
+              👁️ Hướng nhìn: Vườn<br>
+              🏨Điểm độc đáo: Ban công ngoài trời</p>
+           <a href="phong.html#duluxe-standard" class="room-btn">Xem chi tiết</a>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="room-item">
+          <img src="assets/img/phong2.jpg" alt="Phòng Deluxe Superior">
+          <div class="room-info">
+            <h3>Deluxe Ocean</h3>
+            <p>💰 Giá Từ: 4.600.000 VNĐ<br>👤 Số người: tối đa 3 người<br>
+              🛏️ Giường: 01 giường King (hoặc 2 giường Twin) <br>
+              🛀 Phòng tắm: Hai bồn rửa mặt, vòi hoa sen và bồn tắm lát đá cẩm thạch<br>
+              📏 Kích thước: 55m²<br>
+              👁️ Hướng nhìn: biển,ban công rộng rãi</p>
+            <a href="phong.html#deluxe-superior" class="room-btn">Xem chi tiết</a>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="room-item">
+          <img src="assets/img/phong3.jpg" alt="Phòng Sunset Suites">
+          <div class="room-info">
+            <h3>Premier Suites</h3>
+              <p>💰 Giá Từ: 5.700.000 VNĐ<br>👤 Số người: tối đa 3 người<br>
+              🛏️ Giường: 01 giường King (hoặc 2 giường Twin) <br>
+              🛀 Phòng tắm: Hai bồn rửa mặt, vòi hoa sen và bồn tắm lát đá cẩm thạch<br>
+              📏 Kích thước: 70m²<br>
+              👁️ Hướng nhìn: Biển và bãi biển<br>
+              🏨 Điểm độc đáo: Phòng tắm riêng với bàn trang điểm đôi, khu vực thay quần áo, vòi sen và bồn tắm tách biệt</p>
+            <a href="phong.html#sunset-suites" class="room-btn">Xem chi tiết</a>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="room-item">
+          <img src="assets/img/phong4.jpg" alt="Elysium Bay Suites">
+          <div class="room-info">
+            <h3>Executive Suites</h3>
+            <p>💰 Giá Từ: 6.800.000 VNĐ<br>👤 Số người: tối đa 3 người<br>
+              🛏️ Giường: King<br>
+              🛀 Phòng tắm: Phòng tắm riêng với bàn trang điểm đôi, khu vực thay quần áo, vòi sen và bồn tắm tách biệt<br>
+              📏 Kích thước: 109m²<br>
+              👁️ Hướng nhìn: Tầm nhìn hướng biển<br>
+              🏨 Điểm độc đáo: khu vực ngồi/sinh hoạt riêng</p>
+            <a href="phong.html#bay-suites" class="room-btn">Xem chi tiết</a>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="room-item">
+          <img src="assets/img/phong5.jpg" alt="Biệt thự 1 phòng ngủ">
+          <div class="room-info">
+            <h3>Presidential Suite 1 phòng ngủ</h3>
+             <p>💰 Giá Từ: 12.000.000 VNĐ<br>👤 Số người: tối đa 3 người<br>
+              🛏️ Giường: King<br>
+              📏 Kích thước: 130m²<br>
+              🏨 Điểm độc đáo: khu vực sinh hoạt/ngồi riêng,bàn công ngoài trời rộng</p>
+            <a href="phong.html#BT1" class="room-btn">Xem chi tiết</a>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="room-item">
+          <img src="assets/img/phong6.jpg" alt="Biệt thự 3 phòng ngủ">
+          <div class="room-info">
+            <h3>Biệt thự 3 phòng ngủ</h3>
+            <p>💰 Giá Từ: 16.500.000 VNĐ<br>👤 Số người: tối đa 7 người<br>
+              🛏️ Giường: 2 phòng giường King và 1 phòng giường Twin<br>
+              🛀 Phòng tắm: 3 phòng tắm đầy đủ tiện nghi và hiện đại
+<br>
+              📏 Kích thước: 575m²<br>
+              👁️ Hướng nhìn: hứng biển,ban công<br>
+              🏨 Điểm độc đáo: thiết kế 2 tầng, 2 hồ bơi riêng ngoài trời và sân hiên rộng rãi</p>
+            <a href="phong.html#BT3" class="room-btn">Xem chi tiết</a>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="room-item">
+          <img src="assets/img/phong7.jpg" alt="Biệt thự 3 phòng ngủ">
+          <div class="room-info">
+            <h3>Biệt thự sân vườn 4 ngủ</h3>
+            <p>💰 Giá Từ: 18.000.000 VNĐ<br>👤 Số người: tối đa 9 người<br>
+              🛏️ Giường: 3 phòng giường King,1 phòng giường Twin<br>
+              🛀 Phòng tắm: 2 phòng tắm riêng đầy đủ tiện nghi<br>
+              📏 Kích thước: 628m²<br>
+              👁️ Hướng nhìn: hứng biển,ban công<br>
+              🏨 Điểm độc đáo: Hồ bơi vô cực riêng, sân hiên ngoài trời, khu vực sân thượng rộng rãi</p>
+            <a href="phong.html#BT3" class="room-btn">Xem chi tiết</a>
+          </div>
+        </div>
+        <!-- 8 -->
+        <div class="room-item">
+          <img src="assets/img/phong8.jpg" alt="Biệt thự 4 phòng ngủ ">
+          <div class="room-info">
+            <h3>Biệt thự 4 phòng ngủ </h3>
+            <p>💰 Giá Từ: 19.500.000 VNĐ<br>👤 Số người: tối đa 9 người<br>
+              🛏️ Giường: King<br>
+              🛀 Phòng tắm: Bốn phòng tắm riêng biệt, đầy đủ tiện nghi trang bị bồn tắm đá cẩm thạch cỡ lớn
+<br>
+              📏 Kích thước: 628m²<br>
+              👁️ Hướng nhìn: hứng biển,ban công<br>
+              🏨 Điểm độc đáo: view biển,thiết kế hai tầng với bốn phòng nghỉ riêng biệt, khu vực sinh hoạt chung mang phong để thư giãn và tận hưởng, hồ bơi riêng ngoài trời
+</p>
+            <a href="phong.html#BT4" class="room-btn">Xem chi tiết</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ẨM THỰC ===== -->
+<section class="dining">
+  <div class="container">
+    <h2 class="section-title">NHÀ HÀNG</h2>
+    <p class="section-subtitle">KHÁM PHÁ SỰ TINH TÚY CỦA ẨM THỰC MŨI NÉ</p>
+    <p class="section-desc">
+      Lấy cảm hứng từ thiên nhiên mang đậm hương vị biển Mũi Né, mỗi món ăn tại JW Marriott 
+      là sự hòa quyện giữa hải sản tươi sống và nghệ thuật ẩm thực quốc tế. 
+      Trong không gian sang trọng ven biển, du khách được trải nghiệm trọn vẹn tinh hoa ẩm thực duyên hải – 
+      tinh tế, tự nhiên và đầy cảm hứng.
+    </p>
+
+    <!-- Slider Ẩm thực -->
+    <div class="restaurant-slider">
+      <div class="restaurant-slide active">
+        <img src="assets/img/nhahang2.jpg" alt="Nhà hàng Ngân Đình Hà Nội">
+      </div>
+
+      <div class="restaurant-slide">
+        <img src="assets/img/nhahang3.jpg" alt="JW Café">
+      </div>
+
+      <div class="restaurant-slide">
+        <img src="assets/img/nhahang4.jpg" alt="Lounge & Bar">
+      </div>
+
+      <div class="restaurant-slide">
+        <img src="assets/img/nhahang1.jpg" alt="Tiệc tối bên biển">
+      </div>
+
+
+ <div class="controls-small">
+  <span class="prev">&#10094;</span>
+  <span class="pause">&#10073;&#10073;</span>
+  <span class="next">&#10095;</span>
+</div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SERVICES -->
+<section class="services">
+  <div class="service-list">
+    <div class="service-item">
+      <img src="/assets/img/anh7.jpg" alt="hình ảnh">
+      <h3>HÌNH ẢNH</h3>
+      <p>Không gian sang trọng, hiện đại, là nơi lý tưởng cho những buổi tiệc cưới đẳng cấp.</p>
+      <a href="hinhanh.html" class="btn-more">Xem thêm</a>
+    </div>
+
+    <div class="service-item">
+      <img src="/assets/img/uudai3.jpg" alt="ưu đãi">
+      <h3>ƯU ĐÃI</h3>
+      <p> Ưu đãi được thiết kế như một lời mời tinh tế gửi đến những vị khách trân quý của JW Marriott</p>
+      <a href="uudai.html" class="btn-more">Xem thêm</a>
+    </div>
+
+    <div class="service-item">
+      <img src="/assets/img/diem1.jpg" alt="điểm đến">
+      <h3>ĐIỂM ĐẾN</h3>
+      <p>Điểm Đến được tạo nên để dẫn lối du khách khám phá những vùng đất đẹp nhất, giàu bản sắc và tràn đầy năng lượng.</p>
+      <a href="diemden.html" class="btn-more">Xem thêm</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo -->
+    <div class="footer-logo">
+      <span class="star">★</span>
+      <span class="hotel-name">JW Marriott Mui Ne Bay Resort</span>
+    </div>
+
+    <!-- Thông tin liên hệ -->
+    <div class="footer-info">
+      <h4>JW MARRIOTT MUI NE BAY RESORT</h4>
+      <p><i class="fa-solid fa-location-dot"></i>Ven biển Mũi Né, thành phố Phan Thiết, Tỉnh Lâm Đồng </p>
+      <p><i class="fa-solid fa-phone"></i> Phone: 024 3678 6868</p>
+      <p><i class="fa-solid fa-envelope"></i> Email: reservation@jwrmuinebayesort.vn</p>
+    </div>
+
+    <!-- Kênh thông tin -->
+    <div class="footer-social">
+      <h4>CÁC KÊNH THÔNG TIN CHÍNH THỨC</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/hai26062003" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ===== FORM ĐẶT PHÒNG NỔI ===== -->
+<div id="popupOverlay" class="popup-overlay"></div>
+
+<div id="popupBooking" class="popup-booking">
+  <div class="popup-box">
+    <span class="popup-close" onclick="closePopupBooking()">&times;</span>
+    <h2>Đặt phòng ngay</h2>
+
+    <form id="popupBookingForm" onsubmit="handleBookingSubmit(event)">
+
+      <!-- Ô thông báo thành công -->
+      <div id="bookingSuccess" class="booking-success hidden">
+        🎉 Đặt phòng thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.
+      </div>
+
+      <label>Họ và tên:</label>
+      <input type="text" id="popupName" placeholder="Nhập họ và tên" required>
+
+      <label>Email:</label>
+      <input type="email" id="popupEmail" placeholder="Nhập email" required>
+
+      <label>Số điện thoại:</label>
+      <input type="tel" id="popupPhone" placeholder="Nhập số điện thoại" required>
+
+      <label>Chọn phòng:</label>
+      <select id="popupRoom">
+        <option>Deluxe Standard</option>
+        <option>Deluxe Ocean</option>
+        <option>Premier Suites</option>
+        <option>Executive Suites</option>
+        <option>Presidential Suite 1 phòng ngủ</option>
+        <option>Biệt thự 3 phòng ngủ</option>
+        <option>Biệt thự sân vườn 4 ngủ</option>
+        <option>Biệt thự 4 phòng ngủ</option>
+      </select>
+
+      <div class="popup-date-group">
+        <div>
+          <label>Ngày nhận phòng:</label>
+          <input type="date" id="popupCheckin" required>
+        </div>
+        <div>
+          <label>Ngày trả phòng:</label>
+          <input type="date" id="popupCheckout" required>
+        </div>
+      </div>
+
+      <label>Số người:</label>
+      <input type="number" id="popupGuests" min="1" max="10" value="2">
+
+      <button type="submit" class="popup-btn-submit">Xác nhận đặt phòng</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const popup = document.getElementById("image-popup");
+  const popupImg = document.getElementById("popup-img");
+  const introImg = document.getElementById("intro-img");
+  const closeBtn = document.querySelector(".close");
+
+  introImg.addEventListener("click", () => {
+    popup.style.display = "flex";
+    popupImg.src = introImg.src;
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+</script>
+<script>
+const track = document.getElementById("roomTrack");
+const items = document.querySelectorAll(".room-item");
+items.forEach((item) => {
+  const clone = item.cloneNode(true);
+  track.appendChild(clone);
+});
+
+</script>
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+}
+</script>
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 60) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+});
+</script>
+<script src="assets/js/popup-booking.js"></script>
+ <script src="assets/js/main.js"></script>
+</body>
+</html>

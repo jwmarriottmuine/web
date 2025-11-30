@@ -1,0 +1,268 @@
+/* ===== SECTION ẨM THỰC ===== */
+.dining {
+  background-color: #f9f7f3;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.dining .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dining .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #1a3b5d; /* xanh đậm sang trọng */
+  margin-bottom: 10px;
+}
+
+.dining .section-subtitle {
+  font-size: 1.1rem;
+  color: #008cff;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.dining .section-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.dining-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dining-image img {
+  width: 100%;
+  display: block;
+}
+
+.dining-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+  width: 80%;
+}
+
+.dining-text h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.dining-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== SLIDER ẨM THỰC ===== */
+.dining-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  max-width: 1000px;
+  margin: 50px auto 0;
+}
+
+.dining-slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.dining-slide {
+  display: none;
+  position: relative;
+  animation: fade 1s ease-in-out;
+}
+
+.dining-slide.active {
+  display: block;
+}
+
+
+@keyframes fade {
+  from {opacity: 0.3;}
+  to {opacity: 1;}
+}
+
+.dining-text {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+  width: 80%;
+}
+
+.dining-text h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dining-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  padding: 0 20px;
+  user-select: none;
+}
+
+.controls span {
+  cursor: pointer;
+  text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  transition: 0.3s;
+}
+
+.controls span:hover {
+  transform: scale(1.2);
+}
+
+.counter {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.5);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+/* ===== SLIDER NHÀ HÀNG ===== */
+.restaurant-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 900px;             /* Giới hạn chiều rộng */
+  width: 100%;
+  margin: 40px auto 0;
+}
+
+/* Mỗi slide chiếm toàn khung, giữ tỉ lệ đều nhau */
+.restaurant-slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 420px;                /* Chiều cao cố định */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.restaurant-slide.active {
+  display: block;
+}
+
+/* Ảnh tự co theo khung, không méo */
+.restaurant-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* Cắt đều, giữ tỉ lệ */
+  border-radius: 12px;
+  display: block;
+}
+
+/* ===== CHỮ TRÊN ẢNH ===== */
+.dining-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+  width: 85%;
+}
+
+.dining-text h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.dining-text p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ===== NÚT CHUYỂN ẢNH (❚❚ < >) ===== */
+.controls-small {
+  position: absolute;
+  bottom: 10px;
+  right: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  padding: 5px 14px;
+  color: #fff;
+  font-size: 0.9rem;
+  z-index: 10;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.controls-small span {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.controls-small span:hover {
+  transform: scale(1.15);
+  color: #f3cc68;
+}
+
+/* ===== HIỆU ỨNG FADE ===== */
+@keyframes fadeIn {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .restaurant-slide { height: 360px; }
+}
+
+@media (max-width: 768px) {
+  .restaurant-slide { height: 280px; }
+  .dining-text h3 { font-size: 1.2rem; }
+  .dining-text p { font-size: 0.8rem; }
+  .controls-small { font-size: 0.8rem; padding: 4px 10px; }
+}
+
+@media (max-width: 480px) {
+  .restaurant-slide { height: 220px; }
+}

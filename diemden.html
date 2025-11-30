@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JW Marriott Mui Ne Bay Resort</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+   <link rel="stylesheet" href="assets/css/noibat.css" />
+   <link rel="stylesheet" href="assets/css/popup-booking.css">
+   <link rel="stylesheet" href="assets/css/logo.css" />
+  <link rel="stylesheet" href="assets/css/amthuc.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--Header-->
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="JW Marriott Logo">
+      <p class="logo-text">JW Marriott<br><span>Mui Ne Bay Resort</span></p>
+    </div>
+
+    <!-- Menu chính -->
+    <nav class="nav">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="phong.html">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html">SỰ KIỆN</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">TRẢI NGHIỆM ▾</a>
+        <div class="dropdown-content">
+          <a href="hoatdong.html">HOẠT ĐỘNG</a>
+          <a href="spa.html">SPA</a>
+          <a href="thethao.html">THỂ THAO</a>
+        </div>
+      </div>
+      <a href="lienhe.html">LIÊN HỆ</a>
+      <!-- Đặt phòng nằm luôn trong menu -->
+    <a href="#" class="btn-booknow" onclick="openPopupBooking(); return false;">ĐẶT PHÒNG NGAY</a>
+
+
+    </nav>
+
+    <!-- Marriott Bonvoy nằm sát góc phải -->
+   <a href="#" class="bonvoy-logo" aria-label="Marriott Bonvoy Home">
+  <span class="bonvoy-top">MARRIOTT</span>
+  <span class="bonvoy-bottom">BONVOY</span>
+</a>
+
+  </div>
+</header>
+
+
+<!-- HEADER MOBILE (đặt ngoài header chính) -->
+<div class="mobile-header">
+  <div class="logo">★ JW Marriott</div>
+  <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <h3>Menu</h3>
+  <a href="index.html">TRANG CHỦ</a>
+  <a href="phong.html">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html">SỰ KIỆN</a>
+      <a href="beboi.html">BỂ BƠI</a>
+      <a href="spa.html">SPA</a>
+     <a href="thethao.html">THỂ THAO</a>
+      <a href="lienhe.html">Liên hệ</a>
+</div>
+
+
+<!-- SLIDER (Banner chính) -->
+<section class="slider">
+  <div class="slides">
+   <div class="slide active" style="background-image: url('assets/img/anhchinh1.jpg');">
+      </div>
+    </div>
+
+  <div class="slide" style="background-image: url('assets/img/anhchinh2.jpg');">
+    </div>
+    <div class="slide" style="background-image: url('assets/img/anhchinh3.jpg');">
+    </div>
+  </div>
+
+  <!-- Nút điều hướng -->
+  <div class="controls">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</section>
+
+
+
+<!-- ===== ĐIỂM ĐẾN ===== -->
+<section class="destination">
+  <div class="destination-container">
+    <h2>ĐIỂM ĐẾN</h2>
+    <p class="subtitle">THẮNG CẢNH TRONG THÀNH PHỐ</p>
+
+    <p class="intro">
+      Thành phố Phan Thiết – thủ phủ của biển và nắng, nơi hội tụ vẻ đẹp nguyên sơ xen lẫn nét hiện đại.
+      Từ bờ cát trắng dài bất tận, biển xanh biếc, đến những ngọn đồi cát vàng rực rỡ — Mũi Né luôn là 
+      điểm đến không thể bỏ qua với du khách trong và ngoài nước.
+    </p>
+
+    <!-- Bộ sưu tập điểm đến -->
+    <div class="destination-grid">
+
+      <div class="destination-item">
+        <img src="assets/img/diem1.jpg" alt="Làng chài Mũi Né">
+        <h3>Làng chài Mũi Né (Fishing Village)</h3>
+        <b>~2 km về phía Bắc</b>
+        <p>Nơi ngắm thuyền thúng, thuyền gỗ đủ màu sáng sớm có chợ cá tươi rất sinh động. Điểm chụp ảnh biển và cuộc sống ngư dân đặc trưng.</p>
+      </div>
+
+      <div class="destination-item">
+        <img src="assets/img/diem2.jpg" alt="Suối Tiên">
+        <h3>Suối Tiên (Fairy Stream)</h3>
+        <b>~4 km về hướng Đông</b>
+        <p>Con suối nhỏ cạn, chảy qua lớp cát đỏ và vách đất sét – như “tiểu sa mạc”. Cực kỳ hợp để đi bộ, ngắm cảnh, chụp ảnh.</p>
+      </div>
+
+      <div class="destination-item">
+        <img src="assets/img/diem3.jpg" alt="Đồi cát đỏ">
+        <h3>Đồi cát đỏ (Red Sand Dunes)</h3>
+        <b>~7 km về phía Đông Bắc</b>
+        <p>Cát màu đỏ cam, thay đổi theo ánh sáng. Có thể trượt cát, ngắm hoàng hôn, rất gần khu trung tâm.</p>
+      </div>
+
+      <div class="destination-item">
+        <img src="assets/img/diem4.jpg" alt="Tháp Po Shanu Chăm">
+        <h3>Tháp Po Shanu Chăm</h3>
+        <b>~9 km về phía Tây (gần trung tâm Phan Thiết)</b>
+        <p>Di tích văn hoá Chăm cổ, nằm trên đồi cao – nhìn bao quát cả biển và TP Phan Thiết.</p>
+      </div>
+      <div class="destination-item">
+        <img src="assets/img/diem5.png" alt="Nhà thờ Ghềnh Ráng – Biển Gành">
+        <h3>Nhà thờ Ghềnh Ráng – Biển Gành (còn gọi là Hòn Rơm)</h3>
+        <b>~10 km</b>
+        <p>Khu bãi biển yên tĩnh, sóng nhẹ, thích hợp picnic hoặc chụp ảnh cưới.</p>
+      </div>
+      <div class="destination-item">
+        <img src="assets/img/diem6.jpg" alt="Đồi cát trắng">
+        <h3>Đồi cát trắng (White Sand Dunes)</h3>
+        <b>~9 km về phía Tây (gần trung tâm Phan Thiết)</b>
+        <p>Khoảng cách: ~ 25-30 km về phía Đông Bắc/ngoài khu trung tâm Mũi Né. 
+        <br>Bãi cát lớn, màu sáng hơn vùng khác, có hồ sen nằm giữa — rất đẹp để chụp hình, khám phá “sa mạc bên biển”.</p>
+      </div>
+    </div>
+
+    <!-- Nút quay lại -->
+    <div class="back-home">
+      <a href="index.html">← Quay lại trang chủ</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+ <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo -->
+    <div class="footer-logo">
+      <span class="star">★</span>
+      <span class="hotel-name">JW Marriott Mui Ne Bay Resort</span>
+    </div>
+
+    <!-- Thông tin liên hệ -->
+    <div class="footer-info">
+      <h4>JW MARRIOTT MUI NE BAY RESORT</h4>
+      <p><i class="fa-solid fa-location-dot"></i>Ven biển Mũi Né, thành phố Phan Thiết, Tỉnh Lâm Đồng </p>
+      <p><i class="fa-solid fa-phone"></i> Phone: 024 3678 6868</p>
+      <p><i class="fa-solid fa-envelope"></i> Email: reservation@jwrmuinebayesort.vn</p>
+    </div>
+
+    <!-- Kênh thông tin -->
+    <div class="footer-social">
+      <h4>CÁC KÊNH THÔNG TIN CHÍNH THỨC</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/hai26062003" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FORM ĐẶT PHÒNG NỔI ===== -->
+<div id="popupOverlay" class="popup-overlay"></div>
+
+<div id="popupBooking" class="popup-booking">
+  <div class="popup-box">
+    <span class="popup-close" onclick="closePopupBooking()">&times;</span>
+    <h2>Đặt phòng ngay</h2>
+
+    <form id="popupBookingForm" onsubmit="handleBookingSubmit(event)">
+
+      <!-- Ô thông báo thành công -->
+      <div id="bookingSuccess" class="booking-success hidden">
+        🎉 Đặt phòng thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.
+      </div>
+
+      <label>Họ và tên:</label>
+      <input type="text" id="popupName" placeholder="Nhập họ và tên" required>
+
+      <label>Email:</label>
+      <input type="email" id="popupEmail" placeholder="Nhập email" required>
+
+      <label>Số điện thoại:</label>
+      <input type="tel" id="popupPhone" placeholder="Nhập số điện thoại" required>
+
+      <label>Chọn phòng:</label>
+      <select id="popupRoom">
+        <option>Deluxe Standard</option>
+        <option>Deluxe Ocean</option>
+        <option>Premier Suites</option>
+        <option>Executive Suites</option>
+        <option>Presidential Suite 1 phòng ngủ</option>
+        <option>Biệt thự 3 phòng ngủ</option>
+        <option>Biệt thự sân vườn 4 ngủ</option>
+        <option>Biệt thự 4 phòng ngủ</option>
+      </select>
+
+      <div class="popup-date-group">
+        <div>
+          <label>Ngày nhận phòng:</label>
+          <input type="date" id="popupCheckin" required>
+        </div>
+        <div>
+          <label>Ngày trả phòng:</label>
+          <input type="date" id="popupCheckout" required>
+        </div>
+      </div>
+
+      <label>Số người:</label>
+      <input type="number" id="popupGuests" min="1" max="10" value="2">
+
+      <button type="submit" class="popup-btn-submit">Xác nhận đặt phòng</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const popup = document.getElementById("image-popup");
+  const popupImg = document.getElementById("popup-img");
+  const introImg = document.getElementById("intro-img");
+  const closeBtn = document.querySelector(".close");
+
+  introImg.addEventListener("click", () => {
+    popup.style.display = "flex";
+    popupImg.src = introImg.src;
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+</script>
+<script>
+const track = document.getElementById("roomTrack");
+const items = document.querySelectorAll(".room-item");
+items.forEach((item) => {
+  const clone = item.cloneNode(true);
+  track.appendChild(clone);
+});
+
+</script>
+
+<script>
+function moveSlide(button, direction) {
+  const slider = button.closest('.room-sliderx');
+  const slides = slider.querySelector('.slidesx');
+  const total = slides.children.length;
+  let current = parseInt(slider.getAttribute('data-index') || 0);
+  current = (current + direction + total) % total;
+  slider.setAttribute('data-index', current);
+  slides.style.transform = `translateX(-${current * 100}%)`;
+}
+
+// Tự động trượt mỗi 5 giây
+setInterval(() => {
+  document.querySelectorAll('.room-sliderx').forEach(slider => {
+    const slides = slider.querySelector('.slidesx');
+    const total = slides.children.length;
+    let current = parseInt(slider.getAttribute('data-index') || 0);
+    current = (current + 1) % total;
+    slider.setAttribute('data-index', current);
+    slides.style.transform = `translateX(-${current * 100}%)`;
+  });
+}, 5000);
+</script>
+<script>
+document.querySelectorAll('.toggle-desc').forEach(button => {
+  button.addEventListener('click', () => {
+    const wrapper = button.closest('.extra-content');
+    wrapper.classList.toggle('expanded');
+    button.textContent = wrapper.classList.contains('expanded')
+      ? 'Thu gọn ⯅'
+      : 'Xem thêm ⯆';
+  });
+});
+</script>
+ <!-- ... phần cuối cùng của trang ... -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      // chờ 1 chút để trang load xong layout rồi mới cuộn
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 400);
+    } else {
+      console.log("Không tìm thấy phần tử:", hash);
+    }
+  }
+});
+</script>
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 60) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+  });
+</script>
+<script src="assets/js/popup-booking.js"></script>
+ <script src="assets/js/main.js"></script>
+</body>
+</html>

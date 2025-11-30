@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JW Marriott Mui Ne Bay Resort</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/sukien.css" />
+   <link rel="stylesheet" href="assets/css/noibat.css" />
+   <link rel="stylesheet" href="assets/css/logo.css" />
+  <link rel="stylesheet" href="assets/css/amthuc.css" />
+  <link rel="stylesheet" href="assets/css/popup-booking.css">
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--Header-->
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="JW Marriott Logo">
+      <p class="logo-text">JW Marriott<br><span>Mui Ne Bay Resort</span></p>
+    </div>
+
+    <!-- Menu chính -->
+    <nav class="nav">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="phong.html">PHÒNG</a>
+      <a href="nhahang.html">NHÀ HÀNG</a>
+      <a href="sukien.html"class="active">SỰ KIỆN</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">TRẢI NGHIỆM ▾</a>
+        <div class="dropdown-content">
+          <a href="hoatdong.html">HOẠT ĐỘNG </a>
+          <a href="spa.html">SPA</a>
+          <a href="gym.html">GYM</a>
+        </div>
+      </div>
+      <a href="lienhe.html">LIÊN HỆ</a>
+      <!-- Đặt phòng nằm luôn trong menu -->
+     <a href="#" class="btn-booknow" onclick="openPopupBooking(); return false;">ĐẶT PHÒNG NGAY</a>
+
+
+    </nav>
+
+    <!-- Marriott Bonvoy nằm sát góc phải -->
+   <a href="#" class="bonvoy-logo" aria-label="Marriott Bonvoy Home">
+  <span class="bonvoy-top">MARRIOTT</span>
+  <span class="bonvoy-bottom">BONVOY</span>
+</a>
+
+  </div>
+</header>
+
+
+<!-- HEADER MOBILE (đặt ngoài header chính) -->
+<div class="mobile-header">
+  <div class="logo">★ JW Marriott</div>
+  <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <h3>Menu</h3>
+  <a href="index.html">Trang chủ</a>
+  <a href="gioithieu.html">Giới thiệu</a>
+  <a href="phong.html">Phòng</a>
+  <a href="tieccuoi.html">Tiệc cưới</a>
+  <a href="spa.html">Spa</a>
+  <a href="nhahang.html">Nhà hàng</a>
+  <a href="gym.html">Gym</a>
+  <a href="lienhe.html">Liên hệ</a>
+</div>
+
+
+<!-- SLIDER (Banner chính) -->
+<section class="slider">
+  <div class="slides">
+   <div class="slide active" style="background-image: url('assets/img/anhchinh1.jpg');">
+      </div>
+    </div>
+
+  <div class="slide" style="background-image: url('assets/img/anhchinh2.jpg');">
+    </div>
+    <div class="slide" style="background-image: url('assets/img/anhchinh3.jpg');">
+    </div>
+  </div>
+
+  <!-- Nút điều hướng -->
+  <div class="controls">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</section>
+
+
+
+<!-- PHẦN GIỚI THIỆU CHUNG -->
+<section class="event-intro">
+  <h2>HỘI THẢO VÀ SỰ KIỆN</h2>
+  <p>
+    Phòng đại tiệc trang trọng với trang thiết bị chuyên nghiệp, sức chứa đến 600 khách là nhân tố tạo nên những sự kiện xứng tầm.
+    JW Marriott Mũi Né cung cấp 13 phòng chức năng khác nhau đáp ứng mọi nhu cầu — từ hội nghị doanh nghiệp đến tiệc cưới lãng mạn.
+  </p>
+  <a href="#" class="btn-event">Sơ đồ chỗ ngồi</a>
+</section>
+
+<!-- KHỐI SỰ KIỆN 1 -->
+<section class="event-section">
+  <div class="event-box">
+    <div class="event-img">
+      <img src="assets/img/sukien1.jpg" alt="Dịch vụ tiệc cưới">
+    </div>
+    <div class="event-info">
+      <h3>Dịch vụ tiệc cưới</h3>
+      <p>
+        Ghi dấu ngày trọng đại trong khung cảnh biển nhiệt đới 
+        rực rỡ tại JW Marriott Mũi Né. Cảm nhận làn cát mịn và gió 
+        biển mơn man khi trao nhau lời thề nguyện trên bãi biển, hay cùng
+         bước vào không gian sang trọng của Grand Ballroom ngập tràn ánh sáng.
+      </p>
+      <p>Dù bạn chọn lễ cưới bên bờ biển lãng mạn, khu vườn xanh
+         mát hay sảnh tiệc tinh tế với hướng nhìn ra đại dương, đội ngũ chuyên 
+         nghiệp của chúng tôi sẽ chăm chút từng chi tiết để ngày hạnh phúc của 
+         bạn trở nên hoàn hảo – một kỷ niệm ngọt ngào bên sóng biển Mũi Né.</p>
+      <ul>
+        <li>Thiết kế linh hoạt</li>
+        <li>Âm thanh – ánh sáng chuyên nghiệp</li>
+        <li>Chiếu sáng hiện đại</li>
+        <li>Trần cao 7,8m</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- KHỐI SỰ KIỆN 2 -->
+<section class="event-section reverse">
+  <div class="event-box">
+    <div class="event-img">
+      <img src="assets/img/sukien2.jpg" alt="Bãi biển thơ mộng">
+    </div>
+    <div class="event-info">
+      <h3>Bãi biển thơ mộng -  Ocean Whisper Wedding</h3>
+      <p>
+        Cùng người bạn đời trao nhau lời thề ước vĩnh cửu trên 
+        bãi biển riêng tư dài 500m của JW Marriott Mũi Né – nơi cát trắng 
+        mịn màng ôm lấy làn sóng xanh trong vắt. Phông nền là đại dương mênh 
+        mông và bầu trời rực rỡ ánh hoàng hôn, tạo nên khung cảnh hoàn hảo cho 
+        khoảnh khắc thiêng liêng của tình yêu.
+      </p>
+      <p>Giữa làn gió nhẹ và âm thanh thì thầm của biển, từng bước chân của hai bạn trên cát trở thành dấu ấn không thể quên – 
+        mở đầu cho hành trình hạnh phúc trọn đời.</p>
+      <ul>
+        <li>Không gian ngoài trời ấn tượng</li>
+        <li>Trang trí theo chủ đề đa dạng</li>
+        <li>View hồ bơi và khu vườn nhiệt đới</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- KHỐI SỰ KIỆN 3 -->
+<section class="event-section">
+  <div class="event-box">
+    <div class="event-img">
+      <img src="assets/img/sukien3.jpg" alt="Grand Ballroom">
+    </div>
+    <div class="event-info">
+      <h3>Grand Ballroom</h3>
+      <p>Không gian Grand Ballroom mang vẻ đẹp thanh lịch, được bao phủ bởi ánh sáng vàng ấm và những chùm đèn pha lê lấp lánh phản chiếu trên nền tường được ốp gỗ tự nhiên.
+        Phong cách Indochine hiện đại kết hợp tinh tế giữa đường nét 
+        cổ điển và vật liệu sang trọng tạo nên bầu không khí vừa ấm cúng, 
+        vừa đẳng cấp.
+      </p>
+      <p>Đội ngũ nhân viên sự kiện giàu kinh nghiệm của J
+        W Marriott Mũi Né luôn sẵn sàng đồng hành cùng bạn để 
+        biến mọi ý tưởng thành một sự kiện đáng nhớ mang dấu ấn riêng.</p>
+      <ul>
+        <li>Diện tích 600m vuông</li>
+        <li>Phù hợp cho sự kiện, đám cưới lên tới 550 khách</li>
+        <li>Chiếu sáng hiện đại</li>
+        <li>Cấu trúc linh hoạt với đa dạng chủ đề trang trí, sắp xếp bàn/li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- KHỐI SỰ KIỆN 4 -->
+<section class="event-section reverse">
+  <div class="event-box">
+    <div class="event-img">
+      <img src="assets/img/sukien4.jpg" alt="Phòng họp và sự kiện">
+    </div>
+    <div class="event-info">
+      <h3>Phòng họp và sự kiện</h3>
+      <p>
+        Tại JW Marriott Mũi Né, mỗi sự kiện đều được 
+        thiết kế như một trải nghiệm nghệ thuật – nơi tinh thần 
+        chuyên nghiệp hòa cùng vẻ đẹp thanh bình của biển cả. Ba không 
+        gian hội nghị hiện đại, linh hoạt, cùng dịch vụ đẳng cấp 5 sao 
+        tạo nên bối cảnh hoàn hảo cho các cuộc họp, hội thảo hay sự kiện đáng nhớ.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- KHỐI SỰ KIỆN 5 -->
+<section class="event-section">
+  <div class="event-box">
+    <div class="event-img">
+      <img src="assets/img/sukien5.jpg" alt="Coral Room">
+    </div>
+    <div class="event-info">
+      <h3>Coral Room</h3>
+      <p>
+       Phong cách: Ấm cúng, riêng tư, phù hợp cho 
+       các buổi họp chiến lược, hội thảo nhỏ, workshop cao cấp<br>
+        Điểm nhấn: Cửa kính toàn cảnh đón ánh sáng tự nhiên, nhìn ra khu vườn nhiệt đới
+      </p>
+      <p>Thiết bị: Màn chiếu, hệ thống âm thanh, máy chiếu HD và dịch vụ tea-break sang trọng.
+Không gian Coral Room được thiết kế với sự tinh tế trong từng chi tiết, giúp khách hàng tập trung, truyền cảm hứng và kết nối hiệu quả.
+Đây là lựa chọn hoàn hảo cho những cuộc gặp gỡ chiến lược hoặc sự kiện riêng tư cần sự chuyên nghiệp và riêng biệt.</p>
+      <ul>
+        <li>Diện tích: 180m vuông</li>
+        <li>Phù hợp cho sự kiện, hội thảo lên đến 150 khách</li>
+        <li>Cấu trúc linh hoạt với đa dạng chủ đề trang trí, sắp xếp bàn</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+ <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo -->
+    <div class="footer-logo">
+      <span class="star">★</span>
+      <span class="hotel-name">JW Marriott Mui Ne Bay Resort</span>
+    </div>
+
+    <!-- Thông tin liên hệ -->
+    <div class="footer-info">
+      <h4>JW MARRIOTT MUI NE BAY RESORT</h4>
+      <p><i class="fa-solid fa-location-dot"></i>Ven biển Mũi Né, thành phố Phan Thiết, Tỉnh Lâm Đồng </p>
+      <p><i class="fa-solid fa-phone"></i> Phone: 024 3678 6868</p>
+      <p><i class="fa-solid fa-envelope"></i> Email: reservation@jwrmuinebayesort.vn</p>
+    </div>
+
+    <!-- Kênh thông tin -->
+    <div class="footer-social">
+      <h4>CÁC KÊNH THÔNG TIN CHÍNH THỨC</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/hai26062003" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FORM ĐẶT PHÒNG NỔI ===== -->
+<div id="popupOverlay" class="popup-overlay"></div>
+
+<div id="popupBooking" class="popup-booking">
+  <div class="popup-box">
+    <span class="popup-close" onclick="closePopupBooking()">&times;</span>
+    <h2>Đặt phòng ngay</h2>
+
+    <form id="popupBookingForm" onsubmit="handleBookingSubmit(event)">
+
+      <!-- Ô thông báo thành công -->
+      <div id="bookingSuccess" class="booking-success hidden">
+        🎉 Đặt phòng thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.
+      </div>
+
+      <label>Họ và tên:</label>
+      <input type="text" id="popupName" placeholder="Nhập họ và tên" required>
+
+      <label>Email:</label>
+      <input type="email" id="popupEmail" placeholder="Nhập email" required>
+
+      <label>Số điện thoại:</label>
+      <input type="tel" id="popupPhone" placeholder="Nhập số điện thoại" required>
+
+      <label>Chọn phòng:</label>
+      <select id="popupRoom">
+        <option>Deluxe Standard</option>
+        <option>Deluxe Ocean</option>
+        <option>Premier Suites</option>
+        <option>Executive Suites</option>
+        <option>Presidential Suite 1 phòng ngủ</option>
+        <option>Biệt thự 3 phòng ngủ</option>
+        <option>Biệt thự sân vườn 4 ngủ</option>
+        <option>Biệt thự 4 phòng ngủ</option>
+      </select>
+
+      <div class="popup-date-group">
+        <div>
+          <label>Ngày nhận phòng:</label>
+          <input type="date" id="popupCheckin" required>
+        </div>
+        <div>
+          <label>Ngày trả phòng:</label>
+          <input type="date" id="popupCheckout" required>
+        </div>
+      </div>
+
+      <label>Số người:</label>
+      <input type="number" id="popupGuests" min="1" max="10" value="2">
+
+      <button type="submit" class="popup-btn-submit">Xác nhận đặt phòng</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const popup = document.getElementById("image-popup");
+  const popupImg = document.getElementById("popup-img");
+  const introImg = document.getElementById("intro-img");
+  const closeBtn = document.querySelector(".close");
+
+  introImg.addEventListener("click", () => {
+    popup.style.display = "flex";
+    popupImg.src = introImg.src;
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+</script>
+<script>
+const track = document.getElementById("roomTrack");
+const items = document.querySelectorAll(".room-item");
+items.forEach((item) => {
+  const clone = item.cloneNode(true);
+  track.appendChild(clone);
+});
+
+</script>
+
+<script>
+function moveSlide(button, direction) {
+  const slider = button.closest('.room-sliderx');
+  const slides = slider.querySelector('.slidesx');
+  const total = slides.children.length;
+  let current = parseInt(slider.getAttribute('data-index') || 0);
+  current = (current + direction + total) % total;
+  slider.setAttribute('data-index', current);
+  slides.style.transform = `translateX(-${current * 100}%)`;
+}
+
+// Tự động trượt mỗi 5 giây
+setInterval(() => {
+  document.querySelectorAll('.room-sliderx').forEach(slider => {
+    const slides = slider.querySelector('.slidesx');
+    const total = slides.children.length;
+    let current = parseInt(slider.getAttribute('data-index') || 0);
+    current = (current + 1) % total;
+    slider.setAttribute('data-index', current);
+    slides.style.transform = `translateX(-${current * 100}%)`;
+  });
+}, 5000);
+</script>
+<script>
+document.querySelectorAll('.toggle-desc').forEach(button => {
+  button.addEventListener('click', () => {
+    const wrapper = button.closest('.extra-content');
+    wrapper.classList.toggle('expanded');
+    button.textContent = wrapper.classList.contains('expanded')
+      ? 'Thu gọn ⯅'
+      : 'Xem thêm ⯆';
+  });
+});
+</script>
+
+ <script src="assets/js/main.js"></script>
+ <!-- ... phần cuối cùng của trang ... -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      // chờ 1 chút để trang load xong layout rồi mới cuộn
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 400);
+    } else {
+      console.log("Không tìm thấy phần tử:", hash);
+    }
+  }
+});
+</script>
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 60) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+  });
+</script>
+<script src="assets/js/popup-booking.js"></script>
+</body>
+</html>

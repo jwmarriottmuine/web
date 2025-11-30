@@ -1,0 +1,28 @@
+/* ===== LOGO MỚI JW MARRIOTT ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: "Times New Roman", serif;
+  color: #3a2c16;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.logo-text span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #705a2a;
+}

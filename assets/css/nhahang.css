@@ -1,0 +1,137 @@
+/* ================= ẨM THỰC / NHÀ HÀNG – GỌN & CÂN ĐỐI ================= */
+.dining-section {
+  background: linear-gradient(135deg, #e3f3f5, #dbecee);
+  color: #111;
+  padding: 50px 0 60px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.dining-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 50px;
+}
+
+.dining-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #00334d;
+  letter-spacing: 1px;
+}
+
+.dining-header .subtitle {
+  text-transform: uppercase;
+  color: #444;
+  font-size: 15px;
+  margin: 10px 0 15px;
+  letter-spacing: 1.2px;
+}
+
+.dining-header .desc {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- Khối xen kẽ ảnh và chữ --- */
+.dining-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1080px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.dining-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.dining-image {
+  flex: 0.9;
+  max-width: 450px;
+}
+
+.dining-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.dining-image img:hover {
+  transform: scale(1.02);
+}
+
+.dining-info {
+  flex: 1;
+  max-width: 520px;
+}
+
+.dining-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #00334d;
+  margin-bottom: 10px;
+}
+
+.dining-info p {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+.dining-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.dining-info li {
+  color: #444;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+/* --- Nút xem thực đơn --- */
+.btn-menu {
+  display: inline-block;
+  background: #caa53f;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-menu:hover {
+  background: #b89433;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .dining-box,
+  .dining-box.reverse {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .dining-image {
+    max-width: 100%;
+  }
+
+  .dining-info h3 {
+    font-size: 22px;
+  }
+
+  .dining-info p {
+    font-size: 16px;
+  }
+}

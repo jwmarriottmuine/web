@@ -1,0 +1,137 @@
+/* ================= SPA BY JW ================= */
+.spa-section {
+  background: linear-gradient(135deg, #e3f3f5, #dbecee);
+  color: #111;
+  padding: 70px 0 90px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* --- HEADER --- */
+.spa-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 60px;
+}
+
+.spa-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  color: #00334d;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.spa-header .spa-desc {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.75;
+}
+
+/* --- NỘI DUNG GIỚI THIỆU --- */
+.spa-content {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.spa-info {
+  flex: 1;
+}
+
+.spa-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #00334d;
+  margin-bottom: 10px;
+}
+
+.spa-info p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.spa-hours {
+  background: #fff;
+  border-left: 5px solid #caa53f;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.spa-hours h4 {
+  color: #00334d;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.spa-image {
+  flex: 1;
+  max-width: 480px;
+}
+
+.spa-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- DỊCH VỤ --- */
+.spa-services {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.spa-services h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: #00334d;
+  margin-bottom: 30px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #00334d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  background: #caa53f;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .spa-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .spa-image {
+    max-width: 100%;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}

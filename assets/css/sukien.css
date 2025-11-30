@@ -1,0 +1,128 @@
+/* ===== GIỚI THIỆU CHUNG ===== */
+.event-intro {
+  background: linear-gradient(135deg, #e3f3f5, #dbecee);
+  color: #111;
+  text-align: center;
+  padding: 80px 20px 50px;
+}
+
+.event-intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  color: #00334d;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.event-intro p {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.btn-event {
+  display: inline-block;
+  background: #caa53f;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-event:hover {
+  background: #b89433;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== KHỐI SỰ KIỆN ===== */
+.event-section {
+  background: linear-gradient(135deg, #e3f3f5, #dbecee);
+  color: #111;
+  padding: 40px 0 60px;
+}
+
+.event-box {
+  max-width: 1080px;
+  margin: 0 auto -5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.event-img img {
+  width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.event-img img:hover {
+  transform: scale(1.02);
+}
+
+.event-info {
+  flex: 1;
+  max-width: 520px;
+}
+
+.event-info h3 {
+  font-size: 24px;
+  color: #00334d;
+  margin-bottom: 12px;
+  font-family: "Playfair Display", serif;
+}
+
+.event-info p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.event-info ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.event-info ul li {
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* ===== ĐẢO CHIỀU ===== */
+.event-section.reverse .event-box {
+  flex-direction: row-reverse;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .event-box {
+    flex-direction: column;
+    max-width: 90%;
+    gap: 25px;
+  }
+
+  .event-section.reverse .event-box {
+    flex-direction: column;
+  }
+
+  .event-img img {
+    width: 100%;
+  }
+
+  .event-info h3 {
+    font-size: 22px;
+  }
+
+  .event-info p {
+    font-size: 16px;
+  }
+}

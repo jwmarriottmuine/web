@@ -1,0 +1,248 @@
+/* Ẩn hoàn toàn header mobile trên PC */
+.mobile-header,
+.mobile-menu {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  /* Hiển thị header mobile khi màn hình nhỏ */
+  .mobile-header,
+  .mobile-menu {
+    display: block !important;
+  }
+
+  /* Ẩn header PC */
+  .header,
+  .header .nav,
+  .header .icons {
+    display: none !important;
+  }
+  .header-container {
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+
+  /* Header vàng + hamburger */
+  .mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #d6a13a;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+
+  .mobile-header .logo {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .mobile-menu-btn {
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* MENU TRƯỢT */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: #d6a13a;
+    color: #fff;
+    transition: 0.4s ease;
+    z-index: 1200;
+    padding: 60px 20px;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.3);
+  }
+
+  .mobile-menu.active {
+    right: 0;
+  }
+
+  .mobile-menu h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding-bottom: 10px;
+  }
+
+  .mobile-menu a {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 17px;
+  }
+.mobile-header .mobile-menu-btn {
+  margin-left: auto;
+}
+
+  /* SLIDER */
+  .slider {
+    margin-top: 60px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* INTRO */
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .intro-image {
+    margin-top: 20px;
+  }
+
+  .intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+ /* =======================================
+   SỬA HIỂN THỊ PHÒNG KHÁCH SẠN TRÊN MOBILE
+   ======================================= */
+@media (max-width: 768px) {
+  .rooms {
+    padding: 40px 10px;
+    text-align: center;
+    background: #555; /* Giữ màu nền như PC */
+  }
+
+  .rooms h2 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .room-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    padding: 0 10px 20px;
+  }
+
+  .room-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .room-item {
+    flex: 0 0 90%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    scroll-snap-align: center;
+    overflow: hidden;
+  }
+
+  .room-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .room-info {
+    padding: 12px 14px;
+    color: #333;
+  }
+
+  .room-info h3 {
+    font-size: 18px;
+    color: #b7933a;
+    margin-bottom: 6px;
+  }
+
+  .room-info p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+
+
+  /* DỊCH VỤ */
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .service-item {
+    width: 90%;
+    text-align: center;
+  }
+
+  .service-item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  .footer-info, .footer-social {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dining {
+    padding: 50px 20px;
+  }
+
+  .dining-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .dining-text p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .restaurant-slider {
+    width: 95%;
+  }
+
+  .restaurant-slider img {
+    height: 260px;
+  }
+
+  .dining-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .dining-text p {
+    font-size: 0.9rem;
+  }
+}
